@@ -1,6 +1,7 @@
 Overview
 ========
-BoogieScape is a tool for adjusting spatial representations of agricultural landscapes for OpenFLUID modelling platform
+BoogieScape is a tool for adjusting spatial representations of agricultural landscapes 
+for the OpenFLUID modelling platform
 
 It is written in Python 3 and relies on GDAL packagae for Python 3.
 

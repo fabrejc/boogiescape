@@ -26,14 +26,15 @@ def main():
 
   Parser.add_argument('INPUTPATH', type=str, nargs=1,help='Input path')
   Parser.add_argument('OUTPUTPATH', type=str, nargs=1,help='Output path')
+  Parser.add_argument('--overwrite',action='store_true',help='Overwrite outputs')
 
   Args = vars(Parser.parse_args())
+  #print(Args)
 
   InPath = Args['INPUTPATH']
   Args.pop('INPUTPATH')
   OutPath = Args['OUTPUTPATH']
   Args.pop('OUTPUTPATH')
-
 
   BS = BoogieScape.BoogieScape(InPath,OutPath,Args)
   BS.run()

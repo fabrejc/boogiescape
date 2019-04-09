@@ -8,7 +8,7 @@ def readme():
 
 setup(name = 'boogiescape',
       version = '0.0.1',
-      description = 'Tool for adjusting spatial representation of agricultural landscapes for OpenFLUID modelling platform',
+      description = 'Tool for adjusting spatial representations of agricultural landscapes for the OpenFLUID modelling platform',
       long_description = readme(),
       author = 'Jean-Christophe Fabre',
       author_email = 'jean-christophe.fabre@inra.fr',
@@ -22,6 +22,8 @@ setup(name = 'boogiescape',
       },
       test_suite='tests',
       install_requires = [
-        'argparse'
+        'argparse',
+        'networkx',
+        'pydot'
       ]
 )
