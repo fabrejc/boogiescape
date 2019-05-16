@@ -31,10 +31,29 @@ class MainTest(unittest.TestCase):
 
   ######################################################
 
+
   def testPaths(self):
     BS = BoogieScape.BoogieScape('/path/input/path','/path/output/path',{})
     self.assertEqual(BS.getInputPath('X.shp'),'/path/input/path/X.shp')
     self.assertEqual(BS.getOutputPath('Y.shp'),'/path/output/path/Y.shp')
+
+
+  ######################################################
+
+
+  def testUnitsClassSplit(self):
+    Res = BoogieScape.BoogieScape.splitUnitsStrList("")
+    print(Res)
+    self.assertEqual(len(Res),0)
+    Res = BoogieScape.BoogieScape.splitUnitsStrList("TU#99")
+    print(Res)
+    self.assertEqual(len(Res),1)
+    Res = BoogieScape.BoogieScape.splitUnitsStrList("TU#99;UT#101")
+    print(Res)
+    self.assertEqual(len(Res),2)
+    Res = BoogieScape.BoogieScape.splitUnitsStrList("TU#99;UT#101;TT#13")
+    print(Res)
+    self.assertEqual(len(Res),3)
 
 
 ######################################################
