@@ -41,13 +41,18 @@ from . import Data
 
 class BoogieScape():
 
+  _SHPDriver = ogr.GetDriverByName('ESRI Shapefile')
+
   def __init__(self,inputPath,outputPath,extrArgs):
     self._inputPath = inputPath
     self._outputPath = outputPath
     self._extraArgs = extrArgs
 
-    self._APData = list()
-    self._GUData = list()
+    self._APData = dict()
+    self._GUData = dict()
+    self._REData = dict()
+    self._RSData = dict()
+    self._SUData = dict()
 
     self._APFile = 'AP.shp'
     self._GUFile = 'GU.shp'
@@ -55,20 +60,37 @@ class BoogieScape():
     self._RSFile = 'RS.shp'
     self._SUFile = 'SU.shp'
 
-    self._InputREFields = {'OFLD_ID': 'Integer64', 'OFLD_CHILD': 'String'}
-    self._InputRSFields = {'OFLD_ID': 'Integer64','OFLD_TO': 'String','OFLD_PSORD': 'Integer64', 'OFLD_CHILD': 'String',
-                           'slope': 'Real', 'length': 'Real', 'width': 'Real', 'height': 'Real', 'drainarea': 'Real', 'xposition': 'Real', 'yposition': 'Real',
-                           'GUconnect': 'Integer'}
+    self._InputREFields = {'OFLD_ID': 'Integer64', 'OFLD_CHILD': 'String', 'OFLD_PSORD': 'Integer64',
+                           'areamax': 'Real', 'inivolume': 'Real', 'volumemax': 'Real', 'drainarea': 'Real',
+                           'xposition': 'Real', 'yposition': 'Real' }
+    self._InputRSFields = {'OFLD_ID': 'Integer64','OFLD_TO': 'String',  'OFLD_CHILD': 'String',
+                           'slope': 'Real', 'length': 'Real', 'width': 'Real', 'height': 'Real', 'drainarea': 'Real', 
+                           'xposition': 'Real', 'yposition': 'Real', 'GUconnect': 'Integer'}
     self._InputSUFields = {'OFLD_ID': 'Integer64','OFLD_TO': 'String','OFLD_PSORD': 'Integer64',
                            'slope': 'Real', 'area': 'Real', 'xposition': 'Real', 'yposition': 'Real', 'flowdist': 'Real', 'SCSlanduse': 'Integer64', 'SCSsoil': 'String',
                            'AWC': 'String', 'clay': 'String', 'soilbulkd': 'String', 'zsoillayer': 'String', 'nmanning': 'Real', 'Ksat': 'String', 'zrootmax': 'Real', 
                            'soilcode': 'String', 'equipment': 'String', 'pRHt_ini': 'Real', 'rotation': 'String', 'FROM_AP': 'String'}
 
-    self._SHPDriver = ogr.GetDriverByName('ESRI Shapefile')
-
     self._RESource = None
     self._RSSource = None
     self._SUSource = None
+
+
+######################################################
+
+
+  def getOutputPath(self,relPath=None):
+    if relPath:
+      return os.path.join(self._outputPath,relPath)
+    else:
+      return self._outputPath
+
+
+  ######################################################
+
+
+  def getExtraArgs(self):
+    return self._extraArgs
 
 
   ######################################################
@@ -109,7 +131,8 @@ class BoogieScape():
   ######################################################
 
 
-  def _checkLayerFieldsTypes(self,DataSource,ExpectedFields):
+  @staticmethod
+  def _checkLayerFieldsTypes(DataSource,ExpectedFields):
     FoundFields = dict()
     
     LayerDefn = DataSource.GetLayer().GetLayerDefn()
@@ -117,20 +140,19 @@ class BoogieScape():
     for i in range(LayerDefn.GetFieldCount()):
       FoundFields[LayerDefn.GetFieldDefn(i).GetName()] = LayerDefn.GetFieldDefn(i).GetFieldTypeName(LayerDefn.GetFieldDefn(i).GetType())
 
-    #print(FoundFields)
-
     for k,v in ExpectedFields.items():
-      self._printActionStarted("Checking field {}".format(k))
+      BoogieScape._printActionStarted("Checking field {}".format(k))
       if k in FoundFields:
         if ExpectedFields[k] == FoundFields[k]:
-          self._printActionDone()
+          BoogieScape._printActionDone()
         else:
-          self._printActionFailed("Failed (wrong type : {} expected, {} found)".format(ExpectedFields[k],FoundFields[k]))
+          BoogieScape._printActionFailed("Failed (wrong type : {} expected, {} found)".format(ExpectedFields[k],FoundFields[k]))
       else:
-        self._printActionFailed("Failed (not found)")
+        BoogieScape._printActionFailed("Failed (not found)")
 
 
   ######################################################
+
 
   @staticmethod
   def splitUnitsStrList(StrList):
@@ -143,21 +165,67 @@ class BoogieScape():
 
     return Ret
 
+
   ######################################################
 
 
-  def _createOutputShapefile(self,Filename):
+  @staticmethod
+  def _loadShapefile(FilePath,ExpectedFields,UnitsClass):
 
-    self._printActionStarted("Creating output {}".format(Filename))
-    FilePath = self.getOutputPath(Filename)
+    BoogieScape._printActionStarted("Opening input {} file".format(UnitsClass))
+    Source = BoogieScape._SHPDriver.Open(FilePath, 0) # 0 means read-only. 1 means writeable.
+    if Source is None:
+      BoogieScape._printActionFailed("Failed (could not open {})".format(self.getInputPath(self._RSFile)))
+    else:
+      BoogieScape._printActionDone()
+
+    BoogieScape._checkLayerFieldsTypes(Source,ExpectedFields)
+
+    UnitsData = dict()
+
+    Layer = Source.GetLayer(0)
+    Layer.ResetReading()
+
+    for Feature in Layer:
+      Unit = Data.SpatialUnit()
+      Unit.Geometry = ogr.CreateGeometryFromWkb(Feature.GetGeometryRef().ExportToWkb())
+      
+      for Field,Type in ExpectedFields.items():
+        if Field == "OFLD_ID":
+          Unit.Id = Feature.GetField(Field)
+        elif Field == "OFLD_PSORD":
+          Unit.PcsOrd = Feature.GetField(Field)
+        elif Field == "OFLD_TO":
+          ToStrList = Feature.GetField(Field)
+          if ToStrList:
+            Unit.To =  BoogieScape.splitUnitsStrList(ToStrList)
+        elif Field == "OFLD_CHILD":
+          ChildStrList = Feature.GetField(Field)
+          if ChildStrList:
+            Unit.Child =  BoogieScape.splitUnitsStrList(ChildStrList)
+        else:
+          Unit.Attributes[Field] = Feature.GetField(Field)
+
+      UnitsData[Unit.Id] = Unit
+
+    return UnitsData
+
+
+  ######################################################
+
+  
+  @staticmethod
+  def _createShapefile(FilePath):
+
+    BoogieScape._printActionStarted("Creating output {}".format(os.path.basename(FilePath)))
     if os.path.exists(FilePath):
-      self._SHPDriver.DeleteDataSource(FilePath)
-    Source = self._SHPDriver.CreateDataSource(FilePath)
+      BoogieScape._SHPDriver.DeleteDataSource(FilePath)
+    Source = BoogieScape._SHPDriver.CreateDataSource(FilePath)
 
     if Source is None:
-      self._printActionFailed("Failed (could not create {})".format(APFilePath))
+      BoogieScape._printActionFailed("Failed (could not create {})".format(APFilePath))
     else:
-      self._printActionDone()
+      BoogieScape._printActionDone()
 
     return Source
 
@@ -166,100 +234,66 @@ class BoogieScape():
 
 
   def _prepare(self):
-    self._printStage("Preparing")
+    BoogieScape._printStage("Preparing")
     
-    self._printActionStarted("Checking input directory {}".format(self._inputPath))
+    BoogieScape._printActionStarted("Checking input directory {}".format(self._inputPath))
     if os.path.isdir(self._inputPath):
-      self._printActionDone()
+      BoogieScape._printActionDone()
     else:
-      self._printActionFailed(Fatal=1)
+      BoogieScape._printActionFailed(Fatal=1)
 
-    self._printActionStarted("Creating output directory {}".format(self._outputPath))
+    BoogieScape._printActionStarted("Creating output directory {}".format(self._outputPath))
     if os.path.isdir(self._outputPath):
       if "overwrite" in self._extraArgs:
         shutil.rmtree(self._outputPath, ignore_errors=True)
       else:
-        self._printActionFailed(Text="Failed (already exists)",Fatal=1)
+        BoogieScape._printActionFailed(Text="Failed (already exists)",Fatal=1)
     os.makedirs(self._outputPath)
-    self._printActionDone()
+    BoogieScape._printActionDone()
 
     ## Opening RS file
-    self._printActionStarted("Opening input RS file")
-    self._RSSource = self._SHPDriver.Open(self.getInputPath(self._RSFile), 0) # 0 means read-only. 1 means writeable.
-    if self._RSSource is None:
-      self._printActionFailed("Failed (could not open {})".format(self.getInputPath(self._RSFile)))
-    else:
-      self._printActionDone()
-
-    self._checkLayerFieldsTypes(self._RSSource,self._InputRSFields)
+    self._RSData = BoogieScape._loadShapefile(self.getInputPath(self._RSFile),self._InputRSFields,"RS")
 
     ## Opening SU file
-    self._printActionStarted("Opening input SU file")
-    self._SUSource = self._SHPDriver.Open(self.getInputPath(self._SUFile), 0) # 0 means read-only. 1 means writeable.
-    if self._SUSource is None:
-      self._printActionFailed("Failed (could not open {})".format(self.getInputPath(self._SUFile)))
-    else:
-      self._printActionDone()
-    
-    self._checkLayerFieldsTypes(self._SUSource,self._InputSUFields)
+    self._SUData = BoogieScape._loadShapefile(self.getInputPath(self._SUFile),self._InputSUFields,"SU")
 
-   ## Opening RE file
-    self._printActionStarted("Opening input RE file")
-    self._RESource = self._SHPDriver.Open(self.getInputPath(self._REFile), 0) # 0 means read-only. 1 means writeable.
-    if self._RESource is None:
-      self._printActionFailed("Failed (could not open {})".format(self.getInputPath(self._REFile)))
-    else:
-      self._printActionDone()
-    
-    self._checkLayerFieldsTypes(self._RESource,self._InputREFields)
+    ## Opening RE file
+    self._REData = BoogieScape._loadShapefile(self.getInputPath(self._REFile),self._InputREFields,"RE")
 
 
   ######################################################
 
 
-  def _appendAPFromSource(self,OtherSource,OtherClass,PcsOrd):
+  def _appendAPFromSource(self,OtherData,OtherClass,PcsOrd):
 
-    OtherLayer = OtherSource.GetLayer(0)
-    OtherLayer.ResetReading()
+    for k,OtherUnit in OtherData.items():
+      for Child in OtherUnit.Child:
+        if Child[0] == "AP":
+          BoogieScape._printActionStarted("Creating AP#{} from {}#{}".format(Child[1],OtherClass,OtherUnit.Id))
+          Unit = Data.SpatialUnit()
+          Unit.Geometry = OtherUnit.Geometry.Centroid()
 
-    for OtherFeature in OtherLayer:
-      OtherID = OtherFeature.GetField("OFLD_ID")
-      ChildStr = OtherFeature.GetField("OFLD_CHILD")
-      if ChildStr:
-        Children = self.splitUnitsStrList(ChildStr)
-        for CUStr in Children:
-          if CUStr[0] == "AP":
-            self._printActionStarted("Creating AP#{} from {}#{}".format(CUStr[1],OtherClass,OtherID))
-            OtherCentroid = OtherFeature.GetGeometryRef().Centroid()
-
-            Unit = Data.SpatialUnit()
-            Unit.Geometry = OtherCentroid
-
-            SUList = list()
-            if self._SUSource:
-              SULayer = self._SUSource.GetLayer(0)
-              SULayer.ResetReading()
-
-              for SUFeature in SULayer:
-                FromAP = int(SUFeature.GetField("FROM_AP"))
-                if FromAP == int(CUStr[1]):
-                  SUList.append(["SU",int(SUFeature.GetField("OFLD_ID"))])
-
-            Unit.Id = int(CUStr[1])
-            Unit.PcsOrd = int(PcsOrd)
-            Unit.To = SUList
-            self._APData.append(Unit)
-            self._printActionDone()
+          SUList = list()
+          for k,SUUnit in self._SUData.items():
+            FromAP = int(SUUnit.Attributes["FROM_AP"])
+            if FromAP == int(Child[1]):
+              SUList.append(["SU",SUUnit.Id])
+          
+          Unit.Id = Child[1]
+          Unit.PcsOrd = int(PcsOrd)
+          Unit.To = SUList
+          self._APData[Unit.Id] = Unit
+          BoogieScape._printActionDone()
 
 
   ######################################################
 
 
   def _createAP(self):
-    self._printStage("Creating AP")
+    BoogieScape._printStage("Creating AP")
 
-    self._appendAPFromSource(self._RSSource,"RS",1)
-    self._appendAPFromSource(self._RESource,"RE",2)
+    self._appendAPFromSource(self._RSData,"RS",1)
+    self._appendAPFromSource(self._REData,"RE",2)
 
 
   ######################################################
@@ -267,66 +301,27 @@ class BoogieScape():
 
   def _createGU(self):
 
-    self._printStage("Creating GU")
-
-    RSLayer = self._RSSource.GetLayer(0)
-    RELayer = self._RESource.GetLayer(0)
-    SULayer = self._SUSource.GetLayer(0)
-
+    BoogieScape._printStage("Creating GU")
 
     G = networkx.DiGraph()
 
-    self._printActionStarted("Adding RS to graph")
-
-    RSLayer.ResetReading()
-    for RSFeature in RSLayer:
-      Id = int(RSFeature.GetField("OFLD_ID"))
-      Unit = Data.SpatialUnit()
-      Unit.Id = Id
-      ToList = RSFeature.GetField("OFLD_TO")
-      if ToList:
-        Unit.To =  self.splitUnitsStrList(ToList)
-      
-      Unit.Attributes["GUconnect"] = (RSFeature.GetField("GUconnect") > 0)
-
-      G.add_node("RS#{}".format(Id),data=Unit)
-
-    self._printActionDone("not done")
+    BoogieScape._printActionStarted("Adding RS to graph")
+    for k,RSUnit in self._RSData.items():
+      G.add_node("RS#{}".format(RSUnit.Id),data=RSUnit)
+    BoogieScape._printActionDone("done")
     
+    BoogieScape._printActionStarted("Adding SU to graph")
+    for k,SUUnit in self._SUData.items():
+      G.add_node("SU#{}".format(SUUnit.Id),data=SUUnit)
+    BoogieScape._printActionDone("done")
 
-    self._printActionStarted("Adding SU to graph")
-
-    SULayer.ResetReading()
-    for SUFeature in SULayer:
-      Id = int(SUFeature.GetField("OFLD_ID"))
-      Unit = Data.SpatialUnit()
-      Unit.Id = Id
-      ToList = SUFeature.GetField("OFLD_TO")
-      if ToList:
-        Unit.To =  self.splitUnitsStrList(ToList)
-
-      G.add_node("SU#{}".format(Id),data=Unit)
-
-    self._printActionDone("not done")
+    BoogieScape._printActionStarted("Adding RE to graph")
+    for k,REUnit in self._REData.items():
+      G.add_node("RE#{}".format(REUnit.Id),data=REUnit)
+    BoogieScape._printActionDone("done")
 
 
-    self._printActionStarted("Adding RE to graph")
-
-    RELayer.ResetReading()
-    for REFeature in RELayer:
-      Id = int(REFeature.GetField("OFLD_ID"))
-      Unit = Data.SpatialUnit()
-      Unit.Id = Id
-      ToList = REFeature.GetField("OFLD_TO")
-      if ToList:
-        Unit.To =  self.splitUnitsStrList(ToList)
-
-      G.add_node("RE#{}".format(Id),data=Unit)
-
-    self._printActionDone("not done")
-
-
-    self._printActionStarted("Adding connections to graph")
+    BoogieScape._printActionStarted("Adding connections to graph")
 
     for FromNode in list(G.nodes):
       ToList = G.nodes[FromNode]['data'].To
@@ -339,58 +334,57 @@ class BoogieScape():
       else :
         G.add_edge(FromNode,ToNode)
 
-    self._printActionDone("not done")
+    BoogieScape._printActionDone()
 
 
-    self._printActionStarted("Printing graph to file")
+    BoogieScape._printActionStarted("Printing graph to file")
     pos = graphviz_layout(G, prog='dot')
     plt.figure(figsize=(20, 20))
     networkx.draw(G, pos, node_size=300, alpha=0.5, node_color="blue", with_labels=True)
     plt.axis('equal')
     plt.savefig(self.getOutputPath("graph.pdf"))
-    self._printActionDone("done")
-
-
-    # To be reviewed and rewritten (mixed?) from here ...
+    BoogieScape._printActionDone("done")
     
-    GUId = 0
-    RSLayer.ResetReading()
 
-    for RSFeature in RSLayer:
-      if int(RSFeature.GetField("GUconnect")):
-        GUId += 1
-        RSId = int(RSFeature.GetField("OFLD_ID"))
-        self._printActionStarted("Creating GU#{} from RS#{}".format(GUId,RSId))
+    GUId = 1
 
-        Unit = Data.SpatialUnit()
-        Unit.Id = GUId
-        Unit.PcsOrd = 1
-        Unit.To.append(["RS",RSId])
-        self._GUData.append(Unit)
-        self._printActionDone("not done")
-
-
-    self._printActionStarted("Building GU")
-    for Node in list(G.nodes):
-      if not len(list(G.successors(Node))):
-        print(Node,list(networkx.ancestors(G,Node)))
-
-    self._printActionDone("not done")
-
-    # ... to here
+    for k,RSUnit in self._RSData.items():
+      if int(RSUnit.Attributes["GUconnect"]) > 0:
+        UnitStr = "RS#{}".format(RSUnit.Id)
+        BoogieScape._printActionStarted("Creating GU#{} from {}".format(GUId,UnitStr))
+        
+        MultiPolygon = ogr.Geometry(ogr.wkbMultiPolygon)
+        Area = 0
+        for UpUnit in list(networkx.ancestors(G,UnitStr)):
+          if "area" in G.node[UpUnit]['data'].Attributes:
+            Area += G.node[UpUnit]['data'].Attributes['area']
+            MultiPolygon.AddGeometry(G.node[UpUnit]['data'].Geometry)
+         
+        if Area > 0 : 
+          Unit = Data.SpatialUnit()
+          Unit.Id = GUId
+          Unit.PcsOrd = 1
+          Unit.To.append(["RS",RSUnit.Id])
+          Unit.Attributes["area"] = Area
+          Unit.Geometry = MultiPolygon
+          self._GUData[Unit.Id] = Unit
+          GUId += 1
+          BoogieScape._printActionDone()
+        else:
+          BoogieScape._printActionDone("ignored")
 
 
   ######################################################
 
 
   def _writeOutputFiles(self):
-    self._printStage("Writing output GIS files")
+    BoogieScape._printStage("Writing output GIS files")
 
     ##### AP
 
-    APSource = self._createOutputShapefile(self._APFile)
+    APSource = BoogieScape._createShapefile(self.getOutputPath(self._APFile))
 
-    self._printActionStarted("Populating AP.shp ")
+    BoogieScape._printActionStarted("Populating AP.shp ")
 
     APLayer = APSource.CreateLayer("AP",None,ogr.wkbPoint)
     APLayerDefn = APLayer.GetLayerDefn()
@@ -407,7 +401,7 @@ class BoogieScape():
     FieldDefn = ogr.FieldDefn("yposition",ogr.OFTReal)
     APLayer.CreateField(FieldDefn)
 
-    for SpatialUnit in self._APData:
+    for k,SpatialUnit in self._APData.items():
       APFeature = ogr.Feature(APLayerDefn)
 
       APFeature.SetField("OFLD_ID",SpatialUnit.Id)
@@ -424,14 +418,14 @@ class BoogieScape():
       APLayer.CreateFeature(APFeature)
       APFeature = None 
 
-    self._printActionDone()
+    BoogieScape._printActionDone()
 
 
     ##### GU
 
-    GUSource = self._createOutputShapefile(self._GUFile)
+    GUSource = BoogieScape._createShapefile(self.getOutputPath(self._GUFile))
     
-    self._printActionStarted("Populating GU.shp ")
+    BoogieScape._printActionStarted("Populating GU.shp ")
 
     GULayer = GUSource.CreateLayer("GU",None,ogr.wkbMultiPolygon)
     GULayerDefn = GULayer.GetLayerDefn()
@@ -451,35 +445,37 @@ class BoogieScape():
     GULayer.CreateField(FieldDefn)
 
 
-    for SpatialUnit in self._GUData:
+    for k,GUUnit in self._GUData.items():
       GUFeature = ogr.Feature(GULayerDefn)
 
-      GUFeature.SetField("OFLD_ID",SpatialUnit.Id)
-      GUFeature.SetField("OFLD_PSORD",SpatialUnit.PcsOrd)
+      GUFeature.SetField("OFLD_ID",GUUnit.Id)
+      GUFeature.SetField("OFLD_PSORD",GUUnit.PcsOrd)
 
       RSList = list()
-      for ToUnit in SpatialUnit.To:
+      for ToUnit in GUUnit.To:
         RSList.append("{}#{}".format(ToUnit[0],ToUnit[1]))
       GUFeature.SetField("OFLD_TO",";".join(RSList))
       
-      #GUFeature.SetField("xposition",SpatialUnit.Geometry.GetX())
-      #GUFeature.SetField("yposition",SpatialUnit.Geometry.GetY())
-      #GUFeature.SetGeometry(SpatialUnit.Geometry)
+      GUFeature.SetField("area",GUUnit.Attributes["area"])
+      GUFeature.SetField("xposition",GUUnit.Geometry.Centroid().GetX())
+      GUFeature.SetField("yposition",GUUnit.Geometry.Centroid().GetY())
+      GUFeature.SetGeometry(GUUnit.Geometry)
       GULayer.CreateFeature(GUFeature)
       GUFeature = None 
 
-    self._printActionDone("not done")
+    BoogieScape._printActionDone()
 
 
-    self._printStage("Writing output FluidX files")
-    self._printActionStarted("Creating domain.fluidx file")
-    self._printActionDone("not done")
+    BoogieScape._printStage("Writing output FluidX files")
+    BoogieScape._printActionStarted("Creating domain.fluidx file")
+    BoogieScape._printActionDone("not done")
+
 
 ######################################################
 
 
   def _cleanup(self):
-    self._printStage("Cleanup")
+    BoogieScape._printStage("Cleanup")
 
 
   ######################################################
@@ -490,23 +486,6 @@ class BoogieScape():
       return os.path.join(self._inputPath,relPath)
     else:
       return self._inputPath
-
-
-  ######################################################
-
-
-  def getOutputPath(self,relPath=None):
-    if relPath:
-      return os.path.join(self._outputPath,relPath)
-    else:
-      return self._outputPath
-
-
-  ######################################################
-
-
-  def getExtraArgs(self):
-    return self._extraArgs
 
 
   ######################################################
