@@ -1,0 +1,2757 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.4.4-Madeira" projectname="">
+  <homePath path=""/>
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>145</srsid>
+      <srid>2154</srid>
+      <authid>EPSG:2154</authid>
+      <description>RGF93 / Lambert-93</description>
+      <projectionacronym>lcc</projectionacronym>
+      <ellipsoidacronym>GRS80</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-group expanded="1" name="Shapefiles" checked="Qt::Checked">
+      <customproperties/>
+      <layer-tree-layer id="AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6" expanded="1" providerKey="ogr" source="./AP.shp" name="AP" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba" expanded="1" providerKey="ogr" source="./RE.shp" name="RE" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="RS_df2aaa90_ea19_425a_a250_ab7dba286cd4" expanded="1" providerKey="ogr" source="./RS.shp" name="RS" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="SU_013fef20_f5ee_47ad_85d7_0443bdd82f07" expanded="1" providerKey="ogr" source="./SU.shp" name="SU" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f" expanded="1" providerKey="ogr" source="./GU.shp" name="GU" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" name="GeoJSON" checked="Qt::Unchecked">
+      <customproperties/>
+      <layer-tree-layer id="AP_b49b843d_227f_49d0_89f7_62e8ba726764" expanded="1" providerKey="ogr" source="./AP.geojson" name="AP" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="RE_a7003847_3861_477d_9aef_23e287a54ef9" expanded="1" providerKey="ogr" source="./RE.geojson" name="RE" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="RS_2b54217c_b9ad_4172_a746_7d3a88f3021f" expanded="1" providerKey="ogr" source="./RS.geojson" name="RS" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="SU_d30bb53b_6989_45d4_a988_c332abddf7e4" expanded="1" providerKey="ogr" source="./SU.geojson" name="SU" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743" expanded="1" providerKey="ogr" source="./GU.geojson" name="GU" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <custom-order enabled="0">
+      <item>AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6</item>
+      <item>GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f</item>
+      <item>RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba</item>
+      <item>RS_df2aaa90_ea19_425a_a250_ab7dba286cd4</item>
+      <item>SU_013fef20_f5ee_47ad_85d7_0443bdd82f07</item>
+      <item>SU_d30bb53b_6989_45d4_a988_c332abddf7e4</item>
+      <item>RS_2b54217c_b9ad_4172_a746_7d3a88f3021f</item>
+      <item>RE_a7003847_3861_477d_9aef_23e287a54ef9</item>
+      <item>GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743</item>
+      <item>AP_b49b843d_227f_49d0_89f7_62e8ba726764</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings intersection-snapping="0" type="1" tolerance="12" enabled="0" mode="2" unit="1">
+    <individual-layer-settings>
+      <layer-setting id="RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="RS_df2aaa90_ea19_425a_a250_ab7dba286cd4" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="RS_2b54217c_b9ad_4172_a746_7d3a88f3021f" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="RE_a7003847_3861_477d_9aef_23e287a54ef9" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="AP_b49b843d_227f_49d0_89f7_62e8ba726764" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="SU_d30bb53b_6989_45d4_a988_c332abddf7e4" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="SU_013fef20_f5ee_47ad_85d7_0443bdd82f07" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6" type="1" tolerance="12" enabled="0" units="1"/>
+      <layer-setting id="GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743" type="1" tolerance="12" enabled="0" units="1"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+    <units>meters</units>
+    <extent>
+      <xmin>519141.75</xmin>
+      <ymin>6304838.83805499970912933</ymin>
+      <xmax>520013.25</xmax>
+      <ymax>6305832.63974500074982643</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>145</srsid>
+        <srid>2154</srid>
+        <authid>EPSG:2154</authid>
+        <description>RGF93 / Lambert-93</description>
+        <projectionacronym>lcc</projectionacronym>
+        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <projectModels/>
+  <legend updateDrawingOrder="true">
+    <legendgroup open="true" name="Shapefiles" checked="Qt::Checked">
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="AP" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="RE" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="RS" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="RS_df2aaa90_ea19_425a_a250_ab7dba286cd4" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="SU" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="SU_013fef20_f5ee_47ad_85d7_0443bdd82f07" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="GU" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f" visible="1"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" name="GeoJSON" checked="Qt::Unchecked">
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="AP" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="AP_b49b843d_227f_49d0_89f7_62e8ba726764" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="RE" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="RE_a7003847_3861_477d_9aef_23e287a54ef9" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="RS" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="RS_2b54217c_b9ad_4172_a746_7d3a88f3021f" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="SU" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="SU_d30bb53b_6989_45d4_a988_c332abddf7e4" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="GU" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" layerid="GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743" visible="0"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <projectlayers>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="0" minScale="1e+08" autoRefreshTime="0" geometry="Point" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519431.44491328636649996</xmin>
+        <ymin>6305225.39841181505471468</ymin>
+        <xmax>519597.61689974210457876</xmax>
+        <ymax>6305607.14527679607272148</ymax>
+      </extent>
+      <id>AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6</id>
+      <datasource>./AP.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>AP</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" miny="0" crs="" maxx="0" maxz="0" minx="0" minz="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="marker" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="247,128,30,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="179,92,21,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.4" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="3" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory scaleDependency="Area" scaleBasedVisibility="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" enabled="0" barWidth="5" rotationOffset="270" penAlpha="255" labelPlacementMethod="XHeight" height="15" sizeType="MM" backgroundAlpha="255" diagramOrientation="Up" penWidth="0" minScaleDenominator="0" maxScaleDenominator="1e+08" minimumSize="0" width="15" lineSizeType="MM" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" penColor="#000000">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" label="" color="#000000"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" showAll="1" placement="0" priority="0" dist="0" zIndex="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" hidden="0" name="OFLD_ID"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_PSORD"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_TO"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_CHILD"/>
+          <column type="field" width="-1" hidden="0" name="xposition"/>
+          <column type="field" width="-1" hidden="0" name="yposition"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="OFLD_CHILD"/>
+        <field editable="1" name="OFLD_ID"/>
+        <field editable="1" name="OFLD_PSORD"/>
+        <field editable="1" name="OFLD_TO"/>
+        <field editable="1" name="xposition"/>
+        <field editable="1" name="yposition"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="OFLD_CHILD"/>
+        <field labelOnTop="0" name="OFLD_ID"/>
+        <field labelOnTop="0" name="OFLD_PSORD"/>
+        <field labelOnTop="0" name="OFLD_TO"/>
+        <field labelOnTop="0" name="xposition"/>
+        <field labelOnTop="0" name="yposition"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>OFLD_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Point" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519431.44491328636649996</xmin>
+        <ymin>6305225.39841181505471468</ymin>
+        <xmax>519597.61689974210457876</xmax>
+        <ymax>6305607.14527679607272148</ymax>
+      </extent>
+      <id>AP_b49b843d_227f_49d0_89f7_62e8ba726764</id>
+      <datasource>./AP.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>AP</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="marker" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="219,30,42,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="128,17,25,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.4" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="3" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Polygon" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519162.5</xmin>
+        <ymin>6304862.5</ymin>
+        <xmax>519992.5</xmax>
+        <ymax>6305677.5</ymax>
+      </extent>
+      <id>GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743</id>
+      <datasource>./GU.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GU</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="fill" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="73,177,172,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="area">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="area" name=""/>
+        <alias index="5" field="xposition" name=""/>
+        <alias index="6" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="area" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="area" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="area" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Polygon" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519162.5</xmin>
+        <ymin>6304862.5</ymin>
+        <xmax>519992.5</xmax>
+        <ymax>6305677.5</ymax>
+      </extent>
+      <id>GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f</id>
+      <datasource>./GU.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GU</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" miny="0" crs="" maxx="0" maxz="0" minx="0" minz="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="fill" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="154,228,225,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="61,185,179,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory scaleDependency="Area" scaleBasedVisibility="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" enabled="0" barWidth="5" rotationOffset="270" penAlpha="255" labelPlacementMethod="XHeight" height="15" sizeType="MM" backgroundAlpha="255" diagramOrientation="Up" penWidth="0" minScaleDenominator="0" maxScaleDenominator="1e+08" minimumSize="0" width="15" lineSizeType="MM" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" penColor="#000000">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" label="" color="#000000"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" showAll="1" placement="1" priority="0" dist="0" zIndex="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="area">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="area" name=""/>
+        <alias index="5" field="xposition" name=""/>
+        <alias index="6" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="area" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="area" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="area" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" hidden="0" name="OFLD_ID"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_PSORD"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_TO"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_CHILD"/>
+          <column type="field" width="-1" hidden="0" name="area"/>
+          <column type="field" width="-1" hidden="0" name="xposition"/>
+          <column type="field" width="-1" hidden="0" name="yposition"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="OFLD_CHILD"/>
+        <field editable="1" name="OFLD_ID"/>
+        <field editable="1" name="OFLD_PSORD"/>
+        <field editable="1" name="OFLD_TO"/>
+        <field editable="1" name="area"/>
+        <field editable="1" name="xposition"/>
+        <field editable="1" name="yposition"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="OFLD_CHILD"/>
+        <field labelOnTop="0" name="OFLD_ID"/>
+        <field labelOnTop="0" name="OFLD_PSORD"/>
+        <field labelOnTop="0" name="OFLD_TO"/>
+        <field labelOnTop="0" name="area"/>
+        <field labelOnTop="0" name="xposition"/>
+        <field labelOnTop="0" name="yposition"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>OFLD_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="0" minScale="1e+08" autoRefreshTime="0" geometry="Point" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519514.08756805735174567</xmin>
+        <ymin>6305468.85695222578942776</ymin>
+        <xmax>519666.70536929258378223</xmax>
+        <ymax>6305763.62313800770789385</ymax>
+      </extent>
+      <id>RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba</id>
+      <datasource>./RE.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>RE</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" miny="0" crs="" maxx="0" maxz="0" minx="0" minz="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="marker" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="152,169,235,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="50,87,128,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.4" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="8" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory scaleDependency="Area" scaleBasedVisibility="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" enabled="0" barWidth="5" rotationOffset="270" penAlpha="255" labelPlacementMethod="XHeight" height="15" sizeType="MM" backgroundAlpha="255" diagramOrientation="Up" penWidth="0" minScaleDenominator="0" maxScaleDenominator="1e+08" minimumSize="0" width="15" lineSizeType="MM" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" penColor="#000000">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" label="" color="#000000"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" showAll="1" placement="0" priority="0" dist="0" zIndex="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" hidden="0" name="OFLD_ID"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_PSORD"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_TO"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_CHILD"/>
+          <column type="field" width="-1" hidden="0" name="xposition"/>
+          <column type="field" width="-1" hidden="0" name="yposition"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="OFLD_CHILD"/>
+        <field editable="1" name="OFLD_ID"/>
+        <field editable="1" name="OFLD_PSORD"/>
+        <field editable="1" name="OFLD_TO"/>
+        <field editable="1" name="xposition"/>
+        <field editable="1" name="yposition"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="OFLD_CHILD"/>
+        <field labelOnTop="0" name="OFLD_ID"/>
+        <field labelOnTop="0" name="OFLD_PSORD"/>
+        <field labelOnTop="0" name="OFLD_TO"/>
+        <field labelOnTop="0" name="xposition"/>
+        <field labelOnTop="0" name="yposition"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>OFLD_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Point" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519514.08756805735174567</xmin>
+        <ymin>6305468.85695222578942776</ymin>
+        <xmax>519666.70536929258378223</xmax>
+        <ymax>6305763.62313800770789385</ymax>
+      </extent>
+      <id>RE_a7003847_3861_477d_9aef_23e287a54ef9</id>
+      <datasource>./RE.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>RE</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="marker" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="72,123,182,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="50,87,128,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.4" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="8" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Line" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519426.34280529787065461</xmin>
+        <ymin>6305118.48376321140676737</ymin>
+        <xmax>519672.46440000087022781</xmax>
+        <ymax>6305808.97780000045895576</ymax>
+      </extent>
+      <id>RS_2b54217c_b9ad_4172_a746_7d3a88f3021f</id>
+      <datasource>./RS.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>RS</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="line" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleLine" enabled="1" locked="0">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="54,90,130,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="1.3" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Line" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519426.34280529787065461</xmin>
+        <ymin>6305118.48376321140676737</ymin>
+        <xmax>519672.46440000087022781</xmax>
+        <ymax>6305808.97780000045895576</ymax>
+      </extent>
+      <id>RS_df2aaa90_ea19_425a_a250_ab7dba286cd4</id>
+      <datasource>./RS.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>RS</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" miny="0" crs="" maxx="0" maxz="0" minx="0" minz="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="line" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleLine" enabled="1" locked="0">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="49,130,206,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="1.3" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory scaleDependency="Area" scaleBasedVisibility="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" enabled="0" barWidth="5" rotationOffset="270" penAlpha="255" labelPlacementMethod="XHeight" height="15" sizeType="MM" backgroundAlpha="255" diagramOrientation="Up" penWidth="0" minScaleDenominator="0" maxScaleDenominator="1e+08" minimumSize="0" width="15" lineSizeType="MM" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" penColor="#000000">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" label="" color="#000000"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" showAll="1" placement="2" priority="0" dist="0" zIndex="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" hidden="0" name="OFLD_ID"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_PSORD"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_TO"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_CHILD"/>
+          <column type="field" width="-1" hidden="0" name="xposition"/>
+          <column type="field" width="-1" hidden="0" name="yposition"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="OFLD_CHILD"/>
+        <field editable="1" name="OFLD_ID"/>
+        <field editable="1" name="OFLD_PSORD"/>
+        <field editable="1" name="OFLD_TO"/>
+        <field editable="1" name="xposition"/>
+        <field editable="1" name="yposition"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="OFLD_CHILD"/>
+        <field labelOnTop="0" name="OFLD_ID"/>
+        <field labelOnTop="0" name="OFLD_PSORD"/>
+        <field labelOnTop="0" name="OFLD_TO"/>
+        <field labelOnTop="0" name="xposition"/>
+        <field labelOnTop="0" name="yposition"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>OFLD_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Polygon" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519162.5</xmin>
+        <ymin>6304862.5</ymin>
+        <xmax>519992.5</xmax>
+        <ymax>6305782.96115654520690441</ymax>
+      </extent>
+      <id>SU_013fef20_f5ee_47ad_85d7_0443bdd82f07</id>
+      <datasource>./SU.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>SU</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" miny="0" crs="" maxx="0" maxz="0" minx="0" minz="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="fill" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="162,175,21,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="124,134,15,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="&quot;OFLD_ID&quot;" key="dualview/previewExpressions"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory scaleDependency="Area" scaleBasedVisibility="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" enabled="0" barWidth="5" rotationOffset="270" penAlpha="255" labelPlacementMethod="XHeight" height="15" sizeType="MM" backgroundAlpha="255" diagramOrientation="Up" penWidth="0" minScaleDenominator="0" maxScaleDenominator="1e+08" minimumSize="0" width="15" lineSizeType="MM" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" penColor="#000000">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" label="" color="#000000"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" showAll="1" placement="1" priority="0" dist="0" zIndex="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" hidden="0" name="OFLD_ID"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_PSORD"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_TO"/>
+          <column type="field" width="-1" hidden="0" name="OFLD_CHILD"/>
+          <column type="field" width="-1" hidden="0" name="xposition"/>
+          <column type="field" width="-1" hidden="0" name="yposition"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="OFLD_CHILD"/>
+        <field editable="1" name="OFLD_ID"/>
+        <field editable="1" name="OFLD_PSORD"/>
+        <field editable="1" name="OFLD_TO"/>
+        <field editable="1" name="xposition"/>
+        <field editable="1" name="yposition"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="OFLD_CHILD"/>
+        <field labelOnTop="0" name="OFLD_ID"/>
+        <field labelOnTop="0" name="OFLD_PSORD"/>
+        <field labelOnTop="0" name="OFLD_TO"/>
+        <field labelOnTop="0" name="xposition"/>
+        <field labelOnTop="0" name="yposition"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>OFLD_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyLocal="1" type="vector" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" minScale="1e+08" autoRefreshTime="0" geometry="Polygon" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>519162.5</xmin>
+        <ymin>6304862.5</ymin>
+        <xmax>519992.5</xmax>
+        <ymax>6305782.96115654520690441</ymax>
+      </extent>
+      <id>SU_d30bb53b_6989_45d4_a988_c332abddf7e4</id>
+      <datasource>./SU.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>SU</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" forceraster="0" symbollevels="0" enableorderby="0">
+        <symbols>
+          <symbol force_rhr="0" type="fill" alpha="1" clip_to_extent="1" name="0">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="123,131,40,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="OFLD_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_PSORD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_TO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="OFLD_CHILD">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="yposition">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="OFLD_ID" name=""/>
+        <alias index="1" field="OFLD_PSORD" name=""/>
+        <alias index="2" field="OFLD_TO" name=""/>
+        <alias index="3" field="OFLD_CHILD" name=""/>
+        <alias index="4" field="xposition" name=""/>
+        <alias index="5" field="yposition" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="OFLD_ID" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_PSORD" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_TO" expression="" applyOnUpdate="0"/>
+        <default field="OFLD_CHILD" expression="" applyOnUpdate="0"/>
+        <default field="xposition" expression="" applyOnUpdate="0"/>
+        <default field="yposition" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="OFLD_ID" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_PSORD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_TO" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="OFLD_CHILD" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="yposition" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="OFLD_ID" exp=""/>
+        <constraint desc="" field="OFLD_PSORD" exp=""/>
+        <constraint desc="" field="OFLD_TO" exp=""/>
+        <constraint desc="" field="OFLD_CHILD" exp=""/>
+        <constraint desc="" field="xposition" exp=""/>
+        <constraint desc="" field="yposition" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="AP_9a7fbd5f_464e_4cde_b3dd_17236803cfb6"/>
+    <layer id="GU_a62c816e_f08e_408f_97b9_fe7daa37ac1f"/>
+    <layer id="RE_6020aa77_7acc_45fd_b1ac_a797ff6be3ba"/>
+    <layer id="RS_df2aaa90_ea19_425a_a250_ab7dba286cd4"/>
+    <layer id="SU_013fef20_f5ee_47ad_85d7_0443bdd82f07"/>
+    <layer id="SU_d30bb53b_6989_45d4_a988_c332abddf7e4"/>
+    <layer id="RS_2b54217c_b9ad_4172_a746_7d3a88f3021f"/>
+    <layer id="RE_a7003847_3861_477d_9aef_23e287a54ef9"/>
+    <layer id="GU_5cad56c2_4ef2_4ed3_841c_8ad2d300d743"/>
+    <layer id="AP_b49b843d_227f_49d0_89f7_62e8ba726764"/>
+  </layerorder>
+  <properties>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <PAL>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <SearchMethod type="int">0</SearchMethod>
+      <TextFormat type="int">0</TextFormat>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+    </PAL>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <Gui>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+    </Gui>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <Measurement>
+      <AreaUnits type="QString"></AreaUnits>
+      <DistanceUnits type="QString"></DistanceUnits>
+    </Measurement>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+    </PositionPrecision>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <projectMetadata>
+    <identifier></identifier>
+    <parentidentifier></parentidentifier>
+    <language></language>
+    <type></type>
+    <title></title>
+    <abstract></abstract>
+    <links/>
+    <author>Jean-Christophe Fabre</author>
+    <creation>2019-05-21T14:41:27</creation>
+  </projectMetadata>
+  <Annotations/>
+  <Layouts/>
+</qgis>

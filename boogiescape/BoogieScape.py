@@ -42,6 +42,9 @@ from . import Data
 class BoogieScape():
 
   _SHPDriver = ogr.GetDriverByName('ESRI Shapefile')
+  _GeoJSONDriver = ogr.GetDriverByName('GeoJSON')
+
+  _ResourcesDir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"resources")
 
   def __init__(self,inputPath,outputPath,extrArgs):
     self._inputPath = inputPath
@@ -54,26 +57,65 @@ class BoogieScape():
     self._RSData = dict()
     self._SUData = dict()
 
-    self._APFile = 'AP.shp'
-    self._GUFile = 'GU.shp'
-    self._REFile = 'RE.shp'
-    self._RSFile = 'RS.shp'
-    self._SUFile = 'SU.shp'
+    self._APFileShp = 'AP.shp'
+    self._APFileJson = 'AP.geojson'
+    self._GUFileShp = 'GU.shp'
+    self._GUFileJson = 'GU.geojson'
+    self._REFileShp = 'RE.shp'
+    self._REFileJson = 'RE.geojson'
+    self._RSFileShp = 'RS.shp'
+    self._RSFileJson = 'RS.geojson'
+    self._SUFileShp = 'SU.shp'
+    self._SUFileJson = 'SU.geojson'
 
-    self._InputREFields = {'OFLD_ID': 'Integer64', 'OFLD_CHILD': 'String', 'OFLD_PSORD': 'Integer64',
-                           'areamax': 'Real', 'inivolume': 'Real', 'volumemax': 'Real', 'drainarea': 'Real',
-                           'xposition': 'Real', 'yposition': 'Real' }
-    self._InputRSFields = {'OFLD_ID': 'Integer64','OFLD_TO': 'String',  'OFLD_CHILD': 'String',
-                           'slope': 'Real', 'length': 'Real', 'width': 'Real', 'height': 'Real', 'drainarea': 'Real', 
-                           'xposition': 'Real', 'yposition': 'Real', 'GUconnect': 'Integer'}
-    self._InputSUFields = {'OFLD_ID': 'Integer64','OFLD_TO': 'String','OFLD_PSORD': 'Integer64',
-                           'slope': 'Real', 'area': 'Real', 'xposition': 'Real', 'yposition': 'Real', 'flowdist': 'Real', 'SCSlanduse': 'Integer64', 'SCSsoil': 'String',
-                           'AWC': 'String', 'clay': 'String', 'soilbulkd': 'String', 'zsoillayer': 'String', 'nmanning': 'Real', 'Ksat': 'String', 'zrootmax': 'Real', 
-                           'soilcode': 'String', 'equipment': 'String', 'pRHt_ini': 'Real', 'rotation': 'String', 'FROM_AP': 'String'}
+    self._InputREFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
+                           'OFLD_CHILD': ogr.OFTString,
+                           'areamax': ogr.OFTReal, 'inivolume': ogr.OFTReal, 'volumemax': ogr.OFTReal, 
+                           'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal,
+                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
+    self._InputRSFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
+                           'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
+                           'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
+                           'drainarea': ogr.OFTReal, 
+                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger}
+    self._InputSUFields = {'OFLD_ID': ogr.OFTInteger64,'OFLD_TO': ogr.OFTString,'OFLD_PSORD': ogr.OFTInteger64,
+                           'slope': ogr.OFTReal, 'area': ogr.OFTReal, 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
+                           'flowdist': ogr.OFTReal, 'SCSlanduse': ogr.OFTInteger64, 'SCSsoil': ogr.OFTString,
+                           'AWC': ogr.OFTString, 'clay': ogr.OFTString, 'soilbulkd': ogr.OFTString, 
+                           'zsoillayer': ogr.OFTString, 'nmanning': ogr.OFTReal, 'Ksat': ogr.OFTString, 
+                           'zrootmax': ogr.OFTReal, 'soilcode': ogr.OFTString, 'equipment': ogr.OFTString, 
+                           'pRHt_ini': ogr.OFTReal, 'rotation': ogr.OFTString, 'FROM_AP': ogr.OFTString}
+
+    self._OutputAPAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
+    self._OutputGUAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
+                                 'area': ogr.OFTReal }
+    self._OutputRSAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal,
+                                 'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
+                                 'drainarea': ogr.OFTReal }
+    self._OutputREAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal,
+                                 'areamax': ogr.OFTReal, 'inivolume': ogr.OFTReal, 'volumemax': ogr.OFTReal, 
+                                 'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal}
+    self._OutputSUAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal,
+                                 'slope': ogr.OFTReal, 'area': ogr.OFTReal,
+                                 'flowdist': ogr.OFTReal, 'SCSlanduse': ogr.OFTInteger64, 'SCSsoil': ogr.OFTString,
+                                 'AWC': ogr.OFTString, 'clay': ogr.OFTString, 'soilbulkd': ogr.OFTString, 
+                                 'zsoillayer': ogr.OFTString, 'nmanning': ogr.OFTReal, 'Ksat': ogr.OFTString, 
+                                 'zrootmax': ogr.OFTReal, 'soilcode': ogr.OFTString, 'equipment': ogr.OFTString, 
+                                 'pRHt_ini': ogr.OFTReal, 'rotation': ogr.OFTString }
 
     self._RESource = None
     self._RSSource = None
     self._SUSource = None
+
+
+  ######################################################
+
+
+  def getInputPath(self,relPath=None):
+    if relPath:
+      return os.path.join(self._inputPath,relPath)
+    else:
+      return self._inputPath
 
 
 ######################################################
@@ -138,7 +180,7 @@ class BoogieScape():
     LayerDefn = DataSource.GetLayer().GetLayerDefn()
 
     for i in range(LayerDefn.GetFieldCount()):
-      FoundFields[LayerDefn.GetFieldDefn(i).GetName()] = LayerDefn.GetFieldDefn(i).GetFieldTypeName(LayerDefn.GetFieldDefn(i).GetType())
+      FoundFields[LayerDefn.GetFieldDefn(i).GetName()] = LayerDefn.GetFieldDefn(i).GetType()
 
     for k,v in ExpectedFields.items():
       BoogieScape._printActionStarted("Checking field {}".format(k))
@@ -215,12 +257,12 @@ class BoogieScape():
 
   
   @staticmethod
-  def _createShapefile(FilePath):
+  def _createGISfile(Driver,FilePath):
 
-    BoogieScape._printActionStarted("Creating output {}".format(os.path.basename(FilePath)))
+    BoogieScape._printActionStarted("Creating GIS file {}".format(os.path.basename(FilePath)))
     if os.path.exists(FilePath):
-      BoogieScape._SHPDriver.DeleteDataSource(FilePath)
-    Source = BoogieScape._SHPDriver.CreateDataSource(FilePath)
+      Driver.DeleteDataSource(FilePath)
+    Source = Driver.CreateDataSource(FilePath)
 
     if Source is None:
       BoogieScape._printActionFailed("Failed (could not create {})".format(APFilePath))
@@ -252,13 +294,13 @@ class BoogieScape():
     BoogieScape._printActionDone()
 
     ## Opening RS file
-    self._RSData = BoogieScape._loadShapefile(self.getInputPath(self._RSFile),self._InputRSFields,"RS")
+    self._RSData = BoogieScape._loadShapefile(self.getInputPath(self._RSFileShp),self._InputRSFields,"RS")
 
     ## Opening SU file
-    self._SUData = BoogieScape._loadShapefile(self.getInputPath(self._SUFile),self._InputSUFields,"SU")
+    self._SUData = BoogieScape._loadShapefile(self.getInputPath(self._SUFileShp),self._InputSUFields,"SU")
 
     ## Opening RE file
-    self._REData = BoogieScape._loadShapefile(self.getInputPath(self._REFile),self._InputREFields,"RE")
+    self._REData = BoogieScape._loadShapefile(self.getInputPath(self._REFileShp),self._InputREFields,"RE")
 
 
   ######################################################
@@ -282,6 +324,8 @@ class BoogieScape():
           Unit.Id = Child[1]
           Unit.PcsOrd = int(PcsOrd)
           Unit.To = SUList
+          Unit.Attributes['xposition'] = Unit.Geometry.GetX()
+          Unit.Attributes['yposition'] = Unit.Geometry.GetY()
           self._APData[Unit.Id] = Unit
           BoogieScape._printActionDone()
 
@@ -366,6 +410,8 @@ class BoogieScape():
           Unit.PcsOrd = 1
           Unit.To.append(["RS",RSUnit.Id])
           Unit.Attributes["area"] = Area
+          Unit.Attributes["xposition"] = MultiPolygon.Centroid().GetX()
+          Unit.Attributes["yposition"] = MultiPolygon.Centroid().GetY()
           Unit.Geometry = MultiPolygon
           self._GUData[Unit.Id] = Unit
           GUId += 1
@@ -377,94 +423,94 @@ class BoogieScape():
   ######################################################
 
 
+  @staticmethod
+  def _writeGISfile(Driver,FilePath,GeometryType,AttributesDef,Data):
+    
+    if not len(Data):
+      return
+
+    Source = BoogieScape._createGISfile(Driver,FilePath)
+
+    LayerName = os.path.splitext(os.path.basename(FilePath))[0]
+    Layer =  Source.CreateLayer(LayerName,None,GeometryType)
+    LayerDefn = Layer.GetLayerDefn()
+
+    FieldDefn = ogr.FieldDefn("OFLD_ID",ogr.OFTInteger)
+    Layer.CreateField(FieldDefn)
+    FieldDefn = ogr.FieldDefn("OFLD_PSORD",ogr.OFTInteger)
+    Layer.CreateField(FieldDefn)
+    FieldDefn = ogr.FieldDefn("OFLD_TO",ogr.OFTString)
+    Layer.CreateField(FieldDefn)
+    FieldDefn = ogr.FieldDefn("OFLD_CHILD",ogr.OFTString)
+    Layer.CreateField(FieldDefn)
+
+    for AttrName,Type in AttributesDef.items():
+      FieldDefn = ogr.FieldDefn(AttrName,Type)
+      Layer.CreateField(FieldDefn)
+
+    for k,Unit in Data.items():
+      Feature = ogr.Feature(LayerDefn)
+
+      Feature.SetField("OFLD_ID",Unit.Id)
+      Feature.SetField("OFLD_PSORD",Unit.PcsOrd)
+      
+      UnitsList = list()
+      for LinkedUnit in Unit.To:
+        UnitsList.append("{}#{}".format(LinkedUnit[0],LinkedUnit[1]))
+      Feature.SetField("OFLD_TO",";".join(UnitsList))
+      
+      UnitsList = list()
+      for LinkedUnit in Unit.Child:
+        UnitsList.append("{}#{}".format(LinkedUnit[0],LinkedUnit[1]))
+      Feature.SetField("OFLD_CHILD",";".join(UnitsList))
+
+      for AttrName,Type in AttributesDef.items():
+        Feature.SetField(AttrName,Unit.Attributes[AttrName])
+
+      Feature.SetGeometry(Unit.Geometry)
+      Layer.CreateFeature(Feature)
+      Feature = None 
+
+
+  ######################################################
+
+
   def _writeOutputFiles(self):
     BoogieScape._printStage("Writing output GIS files")
 
     ##### AP
-
-    APSource = BoogieScape._createShapefile(self.getOutputPath(self._APFile))
-
-    BoogieScape._printActionStarted("Populating AP.shp ")
-
-    APLayer = APSource.CreateLayer("AP",None,ogr.wkbPoint)
-    APLayerDefn = APLayer.GetLayerDefn()
-
-    FieldDefn = ogr.FieldDefn("OFLD_ID",ogr.OFTInteger)
-    APLayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("OFLD_PSORD",ogr.OFTInteger)
-    APLayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("OFLD_TO",ogr.OFTString)
-    FieldDefn.SetWidth(254)
-    APLayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("xposition",ogr.OFTReal)
-    APLayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("yposition",ogr.OFTReal)
-    APLayer.CreateField(FieldDefn)
-
-    for k,SpatialUnit in self._APData.items():
-      APFeature = ogr.Feature(APLayerDefn)
-
-      APFeature.SetField("OFLD_ID",SpatialUnit.Id)
-      APFeature.SetField("OFLD_PSORD",SpatialUnit.PcsOrd)
-      
-      SUList = list()
-      for ToUnit in SpatialUnit.To:
-        SUList.append("{}#{}".format(ToUnit[0],ToUnit[1]))
-      APFeature.SetField("OFLD_TO",";".join(SUList))
-      
-      APFeature.SetField("xposition",SpatialUnit.Geometry.GetX())
-      APFeature.SetField("yposition",SpatialUnit.Geometry.GetY())
-      APFeature.SetGeometry(SpatialUnit.Geometry)
-      APLayer.CreateFeature(APFeature)
-      APFeature = None 
-
-    BoogieScape._printActionDone()
-
-
-    ##### GU
-
-    GUSource = BoogieScape._createShapefile(self.getOutputPath(self._GUFile))
+    BoogieScape._writeGISfile(BoogieScape._SHPDriver,self.getOutputPath(self._APFileShp),
+                              ogr.wkbPoint,self._OutputAPAttributes,self._APData)
+    BoogieScape._writeGISfile(BoogieScape._GeoJSONDriver,self.getOutputPath(self._APFileJson),
+                              ogr.wkbPoint,self._OutputAPAttributes,self._APData)
     
-    BoogieScape._printActionStarted("Populating GU.shp ")
+    ##### GU
+    BoogieScape._writeGISfile(BoogieScape._SHPDriver,self.getOutputPath(self._GUFileShp),
+                              ogr.wkbMultiPolygon,self._OutputGUAttributes,self._GUData)
+    BoogieScape._writeGISfile(BoogieScape._GeoJSONDriver,self.getOutputPath(self._GUFileJson),
+                              ogr.wkbMultiPolygon,self._OutputGUAttributes,self._GUData)
 
-    GULayer = GUSource.CreateLayer("GU",None,ogr.wkbMultiPolygon)
-    GULayerDefn = GULayer.GetLayerDefn()
+    
+    ##### RE
+    BoogieScape._writeGISfile(BoogieScape._SHPDriver,self.getOutputPath(self._REFileShp),
+                              ogr.wkbPoint,self._OutputREAttributes,self._REData)
+    BoogieScape._writeGISfile(BoogieScape._GeoJSONDriver,self.getOutputPath(self._REFileJson),
+                              ogr.wkbPoint,self._OutputREAttributes,self._REData)
 
-    FieldDefn = ogr.FieldDefn("OFLD_ID",ogr.OFTInteger)
-    GULayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("OFLD_PSORD",ogr.OFTInteger)
-    GULayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("OFLD_TO",ogr.OFTString)
-    FieldDefn.SetWidth(254)
-    GULayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("xposition",ogr.OFTReal)
-    GULayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("yposition",ogr.OFTReal)
-    GULayer.CreateField(FieldDefn)
-    FieldDefn = ogr.FieldDefn("area",ogr.OFTReal)
-    GULayer.CreateField(FieldDefn)
+    ##### RS
+    BoogieScape._writeGISfile(BoogieScape._SHPDriver,self.getOutputPath(self._RSFileShp),
+                              ogr.wkbMultiLineString,self._OutputRSAttributes,self._RSData)
+    BoogieScape._writeGISfile(BoogieScape._GeoJSONDriver,self.getOutputPath(self._RSFileJson),
+                              ogr.wkbMultiLineString,self._OutputRSAttributes,self._RSData)
 
+    ##### SU
+    BoogieScape._writeGISfile(BoogieScape._SHPDriver,self.getOutputPath(self._SUFileShp),
+                              ogr.wkbPolygon,self._OutputSUAttributes,self._SUData)
+    BoogieScape._writeGISfile(BoogieScape._GeoJSONDriver,self.getOutputPath(self._SUFileJson),
+                              ogr.wkbPolygon,self._OutputSUAttributes,self._SUData)
 
-    for k,GUUnit in self._GUData.items():
-      GUFeature = ogr.Feature(GULayerDefn)
-
-      GUFeature.SetField("OFLD_ID",GUUnit.Id)
-      GUFeature.SetField("OFLD_PSORD",GUUnit.PcsOrd)
-
-      RSList = list()
-      for ToUnit in GUUnit.To:
-        RSList.append("{}#{}".format(ToUnit[0],ToUnit[1]))
-      GUFeature.SetField("OFLD_TO",";".join(RSList))
-      
-      GUFeature.SetField("area",GUUnit.Attributes["area"])
-      GUFeature.SetField("xposition",GUUnit.Geometry.Centroid().GetX())
-      GUFeature.SetField("yposition",GUUnit.Geometry.Centroid().GetY())
-      GUFeature.SetGeometry(GUUnit.Geometry)
-      GULayer.CreateFeature(GUFeature)
-      GUFeature = None 
-
-    BoogieScape._printActionDone()
-
+    
+    shutil.copyfile(os.path.join(BoogieScape._ResourcesDir,"outputs.qgs"), self.getOutputPath("outputs.qgs"))
 
     BoogieScape._printStage("Writing output FluidX files")
     BoogieScape._printActionStarted("Creating domain.fluidx file")
@@ -477,15 +523,20 @@ class BoogieScape():
   def _cleanup(self):
     BoogieScape._printStage("Cleanup")
 
+    BoogieScape._printActionStarted("Converting RE slope values")
+    for Key in self._REData.keys():
+      self._REData[Key].Attributes['slope'] = self._REData[Key].Attributes['slope'] / 100
+    BoogieScape._printActionDone()
 
-  ######################################################
+    BoogieScape._printActionStarted("Converting RS slope values")
+    for Key in self._RSData.keys():
+      self._RSData[Key].Attributes['slope'] = self._RSData[Key].Attributes['slope'] / 100
+    BoogieScape._printActionDone()
 
-
-  def getInputPath(self,relPath=None):
-    if relPath:
-      return os.path.join(self._inputPath,relPath)
-    else:
-      return self._inputPath
+    BoogieScape._printActionStarted("Converting SU slope values")
+    for Key in self._SUData.keys():
+      self._SUData[Key].Attributes['slope'] = self._SUData[Key].Attributes['slope'] / 100
+    BoogieScape._printActionDone()
 
 
   ######################################################
@@ -495,5 +546,5 @@ class BoogieScape():
     self._prepare()
     self._createAP()
     self._createGU()
-    self._writeOutputFiles()
     self._cleanup()
+    self._writeOutputFiles()
