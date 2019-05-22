@@ -69,7 +69,7 @@ class BoogieScape():
     self._SUFileJson = 'SU.geojson'
 
     self._InputREFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
-                           'OFLD_CHILD': ogr.OFTString,
+                           'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
                            'areamax': ogr.OFTReal, 'inivolume': ogr.OFTReal, 'volumemax': ogr.OFTReal, 
                            'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal,
                            'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
@@ -197,13 +197,23 @@ class BoogieScape():
 
 
   @staticmethod
+  def splitUnitsStr(Str):
+    Ret = Str.split("#")
+    if len(Ret) == 2:
+      return Ret
+
+    return None
+
+
+  ######################################################
+
+
+  @staticmethod
   def splitUnitsStrList(StrList):
     Ret = list()
     ClassUnitsList = list(filter(None,StrList.split(';')))
     for CUStr in ClassUnitsList:
-      CUStr = CUStr.split("#")
-      if len(CUStr) == 2:
-        Ret.append(CUStr)
+      Ret.append(BoogieScape.splitUnitsStr(CUStr))
 
     return Ret
 
@@ -217,11 +227,13 @@ class BoogieScape():
     BoogieScape._printActionStarted("Opening input {} file".format(UnitsClass))
     Source = BoogieScape._SHPDriver.Open(FilePath, 0) # 0 means read-only. 1 means writeable.
     if Source is None:
-      BoogieScape._printActionFailed("Failed (could not open {})".format(self.getInputPath(self._RSFile)))
+      BoogieScape._printActionFailed("Failed (could not open {})".format(FilePath))
     else:
       BoogieScape._printActionDone()
 
     BoogieScape._checkLayerFieldsTypes(Source,ExpectedFields)
+
+    BoogieScape._printActionStarted("Loading input {} file".format(UnitsClass))
 
     UnitsData = dict()
 
@@ -248,7 +260,13 @@ class BoogieScape():
         else:
           Unit.Attributes[Field] = Feature.GetField(Field)
 
+      if Unit.Id is None:
+        BoogieScape._printActionFailed("Failed (empty OFLD_ID field)")
+
+
       UnitsData[Unit.Id] = Unit
+
+    BoogieScape._printActionDone()
 
     return UnitsData
 
@@ -349,23 +367,23 @@ class BoogieScape():
 
     G = networkx.DiGraph()
 
-    BoogieScape._printActionStarted("Adding RS to graph")
+    BoogieScape._printActionStarted("Adding RS to GU graph view")
     for k,RSUnit in self._RSData.items():
       G.add_node("RS#{}".format(RSUnit.Id),data=RSUnit)
     BoogieScape._printActionDone("done")
     
-    BoogieScape._printActionStarted("Adding SU to graph")
+    BoogieScape._printActionStarted("Adding SU to GU graph view")
     for k,SUUnit in self._SUData.items():
       G.add_node("SU#{}".format(SUUnit.Id),data=SUUnit)
     BoogieScape._printActionDone("done")
 
-    BoogieScape._printActionStarted("Adding RE to graph")
+    BoogieScape._printActionStarted("Adding RE to GU graph view")
     for k,REUnit in self._REData.items():
       G.add_node("RE#{}".format(REUnit.Id),data=REUnit)
     BoogieScape._printActionDone("done")
 
 
-    BoogieScape._printActionStarted("Adding connections to graph")
+    BoogieScape._printActionStarted("Building connections in GU graph view")
 
     for FromNode in list(G.nodes):
       ToList = G.nodes[FromNode]['data'].To
@@ -381,12 +399,12 @@ class BoogieScape():
     BoogieScape._printActionDone()
 
 
-    BoogieScape._printActionStarted("Printing graph to file")
+    BoogieScape._printActionStarted("Printing GU graph view to file")
     pos = graphviz_layout(G, prog='dot')
     plt.figure(figsize=(20, 20))
     networkx.draw(G, pos, node_size=300, alpha=0.5, node_color="blue", with_labels=True)
     plt.axis('equal')
-    plt.savefig(self.getOutputPath("graph.pdf"))
+    plt.savefig(self.getOutputPath("GU_graph_view.pdf"))
     BoogieScape._printActionDone("done")
     
 
@@ -399,7 +417,8 @@ class BoogieScape():
         
         MultiPolygon = ogr.Geometry(ogr.wkbMultiPolygon)
         Area = 0
-        for UpUnit in list(networkx.ancestors(G,UnitStr)):
+        Ancestors = list(networkx.ancestors(G,UnitStr))
+        for UpUnit in Ancestors:
           if "area" in G.node[UpUnit]['data'].Attributes:
             Area += G.node[UpUnit]['data'].Attributes['area']
             MultiPolygon.AddGeometry(G.node[UpUnit]['data'].Geometry)
@@ -414,6 +433,15 @@ class BoogieScape():
           Unit.Attributes["yposition"] = MultiPolygon.Centroid().GetY()
           Unit.Geometry = MultiPolygon
           self._GUData[Unit.Id] = Unit
+
+          for FromUnitStr in Ancestors:
+            FromUnit = BoogieScape.splitUnitsStr(FromUnitStr)
+            print(FromUnit)
+            if FromUnit[0] == "SU":
+              self._SUData[int(FromUnit[1])].To.append(["GU",Unit.Id])
+            elif FromUnit[0] == "RE":
+              self._REData[int(FromUnit[1])].To.append(["GU",Unit.Id])
+
           GUId += 1
           BoogieScape._printActionDone()
         else:
