@@ -39,6 +39,14 @@ from . import Data
 ######################################################
 
 
+def indentCRStr(Indent,Str):
+  return "{}{}\n".format("  "*Indent,Str)
+
+
+######################################################
+######################################################
+
+
 class BoogieScape():
 
   _SHPDriver = ogr.GetDriverByName('ESRI Shapefile')
@@ -67,6 +75,8 @@ class BoogieScape():
     self._RSFileJson = 'RS.geojson'
     self._SUFileShp = 'SU.shp'
     self._SUFileJson = 'SU.geojson'
+
+    self._FluidXFile = "domain.fluidx"
 
     self._InputREFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
                            'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
@@ -436,7 +446,6 @@ class BoogieScape():
 
           for FromUnitStr in Ancestors:
             FromUnit = BoogieScape.splitUnitsStr(FromUnitStr)
-            print(FromUnit)
             if FromUnit[0] == "SU":
               self._SUData[int(FromUnit[1])].To.append(["GU",Unit.Id])
             elif FromUnit[0] == "RE":
@@ -503,6 +512,77 @@ class BoogieScape():
   ######################################################
 
 
+  def _writeFluidXDefinition(self,File,Data,UnitsClass):
+    for Id,Unit in Data.items():
+      File.write(indentCRStr(3,'<unit class="{}" ID="{}" pcsorder="{}">'.format(UnitsClass,Unit.Id,Unit.PcsOrd)))
+      
+      for ToUnit in Unit.To:
+        File.write(indentCRStr(4,'<to class="{}" ID="{}" />'.format(ToUnit[0],ToUnit[1])))
+      for ChildUnit in Unit.Child:
+        File.write(indentCRStr(4,'<childof class="{}" ID="{}" />'.format(ChildUnit[0],ChildUnit[1])))
+      
+      File.write(indentCRStr(3,'</unit>'))
+
+
+  ######################################################
+
+
+  def _writeFluidXAttributes(self,File,Data,UnitsClass,ColOrder):
+    
+    File.write(indentCRStr(2,'<attributes unitsclass="{}" colorder="{}">'.format(UnitsClass,";".join(ColOrder))))
+    
+    for Id,Unit in Data.items():
+      File.write("{} ".format(Unit.Id))
+
+      ValuesList = list()
+      for Name in ColOrder:
+        ValuesList.append(str(Unit.Attributes[Name]))
+
+      File.write(" ".join(ValuesList))
+      File.write("\n")
+    
+    File.write(indentCRStr(2,'</attributes>'))
+
+
+  ######################################################
+
+
+  def _writeFluidXfile(self):
+    BoogieScape._printActionStarted("Creating domain.fluidx file")
+   
+    FXFile = open(self.getOutputPath(self._FluidXFile),'w')
+    FXFile.write(indentCRStr(0,'<?xml version="1.0" standalone="yes"?>'))
+    FXFile.write(indentCRStr(0,'<openfluid>'))
+    FXFile.write(indentCRStr(1,'<domain>'))
+
+    FXFile.write(indentCRStr(2,'<definition>'))
+
+    self._writeFluidXDefinition(FXFile,self._APData,"AP")
+    self._writeFluidXDefinition(FXFile,self._GUData,"GU")
+    self._writeFluidXDefinition(FXFile,self._REData,"RE")
+    self._writeFluidXDefinition(FXFile,self._RSData,"RS")
+    self._writeFluidXDefinition(FXFile,self._SUData,"SU")
+
+    FXFile.write(indentCRStr(2,'</definition>'))
+
+    self._writeFluidXAttributes(FXFile,self._APData,"AP",self._OutputAPAttributes.keys())
+    self._writeFluidXAttributes(FXFile,self._GUData,"GU",self._OutputGUAttributes.keys())
+    self._writeFluidXAttributes(FXFile,self._REData,"RE",self._OutputREAttributes.keys())
+    self._writeFluidXAttributes(FXFile,self._RSData,"RS",self._OutputRSAttributes.keys())
+    self._writeFluidXAttributes(FXFile,self._SUData,"SU",self._OutputSUAttributes.keys())
+
+    FXFile.write(indentCRStr(1,'</domain>'))
+    FXFile.write(indentCRStr(0,'</openfluid>'))
+
+
+    FXFile.close()
+
+    BoogieScape._printActionDone()
+
+
+  ######################################################
+
+
   def _writeOutputFiles(self):
     BoogieScape._printStage("Writing output GIS files")
 
@@ -540,9 +620,9 @@ class BoogieScape():
     
     shutil.copyfile(os.path.join(BoogieScape._ResourcesDir,"outputs.qgs"), self.getOutputPath("outputs.qgs"))
 
+
     BoogieScape._printStage("Writing output FluidX files")
-    BoogieScape._printActionStarted("Creating domain.fluidx file")
-    BoogieScape._printActionDone("not done")
+    self._writeFluidXfile()
 
 
 ######################################################
