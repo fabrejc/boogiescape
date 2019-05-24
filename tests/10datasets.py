@@ -32,7 +32,8 @@ class MainTest(unittest.TestCase):
 
 
   def testZone0(self):
-    BS = BoogieScape.BoogieScape(self._getInput('zone0'),self._getOutput('zone0'),{'overwrite' : True})
+    BS = BoogieScape.BoogieScape(self._getInput('zone0'),self._getOutput('zone0'),
+                                 {'overwrite' : True,'export_graph_view' : True})
     BS.run()
 
 

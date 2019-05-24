@@ -84,10 +84,10 @@ class BoogieScape():
                            'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal,
                            'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
     self._InputRSFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
-                           'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
+                           'OFLD_TO': ogr.OFTString,
                            'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
                            'drainarea': ogr.OFTReal, 
-                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger}
+                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger64}
     self._InputSUFields = {'OFLD_ID': ogr.OFTInteger64,'OFLD_TO': ogr.OFTString,'OFLD_PSORD': ogr.OFTInteger64,
                            'slope': ogr.OFTReal, 'area': ogr.OFTReal, 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
                            'flowdist': ogr.OFTReal, 'SCSlanduse': ogr.OFTInteger64, 'SCSsoil': ogr.OFTString,
@@ -121,6 +121,13 @@ class BoogieScape():
   ######################################################
 
 
+  def getExtraArgs(self):
+    return self._extraArgs
+
+
+  ######################################################
+
+
   def getInputPath(self,relPath=None):
     if relPath:
       return os.path.join(self._inputPath,relPath)
@@ -136,13 +143,6 @@ class BoogieScape():
       return os.path.join(self._outputPath,relPath)
     else:
       return self._outputPath
-
-
-  ######################################################
-
-
-  def getExtraArgs(self):
-    return self._extraArgs
 
 
   ######################################################
@@ -195,7 +195,7 @@ class BoogieScape():
     for k,v in ExpectedFields.items():
       BoogieScape._printActionStarted("Checking field {}".format(k))
       if k in FoundFields:
-        if ExpectedFields[k] == FoundFields[k]:
+        if FoundFields[k] == ExpectedFields[k]:
           BoogieScape._printActionDone()
         else:
           BoogieScape._printActionFailed("Failed (wrong type : {} expected, {} found)".format(ExpectedFields[k],FoundFields[k]))
@@ -314,10 +314,10 @@ class BoogieScape():
 
     BoogieScape._printActionStarted("Creating output directory {}".format(self._outputPath))
     if os.path.isdir(self._outputPath):
-      if "overwrite" in self._extraArgs:
+      if self._extraArgs["overwrite"]:
         shutil.rmtree(self._outputPath, ignore_errors=True)
       else:
-        BoogieScape._printActionFailed(Text="Failed (already exists)",Fatal=1)
+        BoogieScape._printActionFailed(Text="Failed (directory already exists)",Fatal=1)
     os.makedirs(self._outputPath)
     BoogieScape._printActionDone()
 
@@ -408,14 +408,14 @@ class BoogieScape():
 
     BoogieScape._printActionDone()
 
-
-    BoogieScape._printActionStarted("Printing GU graph view to file")
-    pos = graphviz_layout(G, prog='dot')
-    plt.figure(figsize=(20, 20))
-    networkx.draw(G, pos, node_size=300, alpha=0.5, node_color="blue", with_labels=True)
-    plt.axis('equal')
-    plt.savefig(self.getOutputPath("GU_graph_view.pdf"))
-    BoogieScape._printActionDone("done")
+    if self._extraArgs["export_graph_view"] :
+      BoogieScape._printActionStarted("Printing GU graph view to file")
+      pos = graphviz_layout(G, prog='dot')
+      plt.figure(figsize=(20, 20))
+      networkx.draw(G, pos, node_size=300, alpha=0.5, node_color="blue", with_labels=True)
+      plt.axis('equal')
+      plt.savefig(self.getOutputPath("GU_graph_view.pdf"))
+      BoogieScape._printActionDone("done")
     
 
     GUId = 1
