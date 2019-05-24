@@ -87,22 +87,22 @@ class BoogieScape():
     self._InputRSFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
                            'OFLD_TO': ogr.OFTString,
                            'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
-                           'drainarea': ogr.OFTReal, 
-                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger64}
+                           'drainarea': ogr.OFTReal, 'nmanning' : ogr.OFTReal,
+                           'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger64 }
     self._InputSUFields = {'OFLD_ID': ogr.OFTInteger64,'OFLD_TO': ogr.OFTString,'OFLD_PSORD': ogr.OFTInteger64,
                            'slope': ogr.OFTReal, 'area': ogr.OFTReal, 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
                            'flowdist': ogr.OFTReal, 'SCSlanduse': ogr.OFTInteger64, 'SCSsoil': ogr.OFTString,
                            'AWC': ogr.OFTString, 'clay': ogr.OFTString, 'soilbulkd': ogr.OFTString, 
                            'zsoillayer': ogr.OFTString, 'nmanning': ogr.OFTReal, 'Ksat': ogr.OFTString, 
                            'zrootmax': ogr.OFTReal, 'soilcode': ogr.OFTString, 'equipment': ogr.OFTString, 
-                           'pRHt_ini': ogr.OFTReal, 'rotation': ogr.OFTString, 'FROM_AP': ogr.OFTString}
+                           'pRHt_ini': ogr.OFTReal, 'rotation': ogr.OFTString, 'FROM_AP': ogr.OFTString }
 
     self._OutputAPAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
     self._OutputGUAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
                                  'area': ogr.OFTReal }
     self._OutputRSAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal,
                                  'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
-                                 'drainarea': ogr.OFTReal }
+                                 'drainarea': ogr.OFTReal, 'nmanning' : ogr.OFTReal }
     self._OutputREAttributes = { 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal,
                                  'areamax': ogr.OFTReal, 'inivolume': ogr.OFTReal, 'volumemax': ogr.OFTReal, 
                                  'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal}
