@@ -7,7 +7,7 @@ def readme():
         return f.read()
 
 setup(name = 'boogiescape',
-      version = '1.0.2',
+      version = '1.0.3',
       description = 'Tool for adjusting spatial representations of agricultural landscapes for the OpenFLUID modelling platform',
       long_description = readme(),
       author = 'Jean-Christophe Fabre',

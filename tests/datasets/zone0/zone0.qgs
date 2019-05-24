@@ -1,48 +1,22 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="3.4.4-Madeira">
-  <homePath path=""/>
+<qgis projectname="" version="2.18.17">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <trust active="0"/>
-  <projectCrs>
-    <spatialrefsys>
-      <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-      <srsid>145</srsid>
-      <srid>2154</srid>
-      <authid>EPSG:2154</authid>
-      <description>RGF93 / Lambert-93</description>
-      <projectionacronym>lcc</projectionacronym>
-      <ellipsoidacronym>GRS80</ellipsoidacronym>
-      <geographicflag>false</geographicflag>
-    </spatialrefsys>
-  </projectCrs>
-  <layer-tree-group>
+  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer name="RE" source="./RE.shp" checked="Qt::Checked" id="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a" providerKey="ogr" expanded="1">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a" source="/home/jcfabre/Labo/OpenFLUID/GitRepositories/development/boogiescape/tests/datasets/zone0/RE.shp" name="RE">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer name="RS" source="./RS.shp" checked="Qt::Checked" id="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c" providerKey="ogr" expanded="1">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c" source="/home/jcfabre/Labo/OpenFLUID/GitRepositories/development/boogiescape/tests/datasets/zone0/RS.shp" name="RS">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer name="SU" source="./SU.shp" checked="Qt::Checked" id="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4" providerKey="ogr" expanded="1">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4" source="/home/jcfabre/Labo/OpenFLUID/GitRepositories/development/boogiescape/tests/datasets/zone0/SU.shp" name="SU">
       <customproperties/>
     </layer-tree-layer>
-    <custom-order enabled="0">
-      <item>RE_61a8a340_6234_47bb_9902_ae3ab8d9744a</item>
-      <item>RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c</item>
-      <item>SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4</item>
-    </custom-order>
   </layer-tree-group>
-  <snapping-settings tolerance="12" unit="1" intersection-snapping="0" enabled="0" mode="2" type="1">
-    <individual-layer-settings>
-      <layer-setting tolerance="12" units="1" enabled="0" type="1" id="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a"/>
-      <layer-setting tolerance="12" units="1" enabled="0" type="1" id="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c"/>
-      <layer-setting tolerance="12" units="1" enabled="0" type="1" id="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4"/>
-    </individual-layer-settings>
-  </snapping-settings>
   <relations/>
-  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+  <mapcanvas>
     <units>meters</units>
     <extent>
       <xmin>519027.19192418304737657</xmin>
@@ -51,6 +25,7 @@
       <ymax>6305879.89357322081923485</ymax>
     </extent>
     <rotation>0</rotation>
+    <projections>0</projections>
     <destinationsrs>
       <spatialrefsys>
         <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
@@ -64,98 +39,34 @@
       </spatialrefsys>
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
+    <layer_coordinate_transform_info/>
   </mapcanvas>
-  <projectModels/>
+  <layer-tree-canvas>
+    <custom-order enabled="0">
+      <item>RE_61a8a340_6234_47bb_9902_ae3ab8d9744a</item>
+      <item>RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c</item>
+      <item>SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4</item>
+    </custom-order>
+  </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" name="RE" checked="Qt::Checked" showFeatureCount="0" open="true">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile visible="1" isInOverview="0" layerid="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RE" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" name="RS" checked="Qt::Checked" showFeatureCount="0" open="true">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile visible="1" isInOverview="0" layerid="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RS" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" name="SU" checked="Qt::Checked" showFeatureCount="0" open="true">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile visible="1" isInOverview="0" layerid="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SU" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
-  <mapViewDocks/>
-  <mapViewDocks3D/>
-  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>WGS84</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-  </mapcanvas>
-  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>WGS84</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-  </mapcanvas>
-  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>WGS84</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-  </mapcanvas>
   <projectlayers>
-    <maplayer geometry="Point" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" minScale="1e+08" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" type="vector" maxScale="0" simplifyLocal="1" styleCategories="AllStyleCategories" simplifyDrawingTol="1" readOnly="0" simplifyDrawingHints="0" labelsEnabled="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="0" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>519514.08756805735174567</xmin>
         <ymin>6305468.85695222578942776</ymin>
@@ -180,247 +91,159 @@
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <contact>
-          <name></name>
-          <organization></organization>
-          <position></position>
-          <voice></voice>
-          <fax></fax>
-          <email></email>
-          <role></role>
-        </contact>
-        <links/>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial maxy="0" dimensions="2" minz="0" maxz="0" crs="" maxx="0" minx="0" miny="0"/>
-          <temporal>
-            <period>
-              <start></start>
-              <end></end>
-            </period>
-          </temporal>
-        </extent>
-      </resourceMetadata>
       <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
-      <dataDependencies/>
-      <legend type="default-vector"/>
       <expressionfields/>
       <map-layer-style-manager current="défaut">
         <map-layer-style name="défaut"/>
       </map-layer-style-manager>
-      <auxiliaryLayer/>
-      <flags>
-        <Identifiable>1</Identifiable>
-        <Removable>1</Removable>
-        <Searchable>1</Searchable>
-      </flags>
-      <renderer-v2 forceraster="0" enableorderby="0" type="singleSymbol" symbollevels="0">
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="connect">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OLDID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="slope">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="drainarea">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="xposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="yposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_PSORD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_TO">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="areamax">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="inivolume">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="volumemax">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_CHILD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="NEWID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="IDTo">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="APconnect">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
-          <symbol name="0" type="marker" alpha="1" force_rhr="0" clip_to_extent="1">
-            <layer pass="0" locked="0" enabled="1" class="SimpleMarker">
+          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
+            <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="3,194,211,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
               <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="22,125,183,255"/>
               <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
               <prop k="size" v="8"/>
-              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
-                  <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
-                </Option>
-              </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale/>
+        <sizescale scalemethod="diameter"/>
       </renderer-v2>
+      <labeling type="simple"/>
       <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>OLDID</value>
-        </property>
-        <property value="0" key="embeddedWidgets/count"/>
+        <property key="dualview/previewExpressions" value="OLDID"/>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory sizeType="MM" lineSizeType="MM" height="15" minScaleDenominator="0" backgroundColor="#ffffff" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" diagramOrientation="Up" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" penColor="#000000" minimumSize="0" maxScaleDenominator="1e+08" barWidth="5" rotationOffset="270" penAlpha="255" backgroundAlpha="255" scaleDependency="Area" width="15" penWidth="0" enabled="0">
-          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>OLDID</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Étiquette"/>
+        <family fieldname="" name="Ubuntu"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="0" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="0">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" placement="0" showAll="1">
-        <properties>
-          <Option type="Map">
-            <Option value="" name="name" type="QString"/>
-            <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
-          </Option>
-        </properties>
-      </DiagramLayerSettings>
-      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
-        <activeChecks/>
-        <checkConfiguration/>
-      </geometryOptions>
-      <fieldConfiguration>
-        <field name="connect">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OLDID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="area">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="slope">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="drainarea">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="xposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="yposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_PSORD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_TO">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="areamax">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="inivolume">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="volumemax">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_CHILD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="NEWID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="IDTo">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-      </fieldConfiguration>
+      <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="18" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform></annotationform>
       <aliases>
         <alias field="connect" index="0" name=""/>
         <alias field="OLDID" index="1" name=""/>
@@ -439,100 +262,39 @@
         <alias field="NEWID" index="14" name=""/>
         <alias field="ID" index="15" name=""/>
         <alias field="IDTo" index="16" name=""/>
+        <alias field="APconnect" index="17" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <defaults>
-        <default field="connect" applyOnUpdate="0" expression=""/>
-        <default field="OLDID" applyOnUpdate="0" expression=""/>
-        <default field="area" applyOnUpdate="0" expression=""/>
-        <default field="slope" applyOnUpdate="0" expression=""/>
-        <default field="drainarea" applyOnUpdate="0" expression=""/>
-        <default field="xposition" applyOnUpdate="0" expression=""/>
-        <default field="yposition" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_PSORD" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_ID" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_TO" applyOnUpdate="0" expression=""/>
-        <default field="areamax" applyOnUpdate="0" expression=""/>
-        <default field="inivolume" applyOnUpdate="0" expression=""/>
-        <default field="volumemax" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_CHILD" applyOnUpdate="0" expression=""/>
-        <default field="NEWID" applyOnUpdate="0" expression=""/>
-        <default field="ID" applyOnUpdate="0" expression=""/>
-        <default field="IDTo" applyOnUpdate="0" expression=""/>
-      </defaults>
-      <constraints>
-        <constraint constraints="0" field="connect" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OLDID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="area" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="slope" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="drainarea" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="xposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="yposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_PSORD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_TO" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="areamax" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="inivolume" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="volumemax" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_CHILD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="NEWID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="IDTo" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-      </constraints>
-      <constraintExpressions>
-        <constraint desc="" field="connect" exp=""/>
-        <constraint desc="" field="OLDID" exp=""/>
-        <constraint desc="" field="area" exp=""/>
-        <constraint desc="" field="slope" exp=""/>
-        <constraint desc="" field="drainarea" exp=""/>
-        <constraint desc="" field="xposition" exp=""/>
-        <constraint desc="" field="yposition" exp=""/>
-        <constraint desc="" field="OFLD_PSORD" exp=""/>
-        <constraint desc="" field="OFLD_ID" exp=""/>
-        <constraint desc="" field="OFLD_TO" exp=""/>
-        <constraint desc="" field="areamax" exp=""/>
-        <constraint desc="" field="inivolume" exp=""/>
-        <constraint desc="" field="volumemax" exp=""/>
-        <constraint desc="" field="OFLD_CHILD" exp=""/>
-        <constraint desc="" field="NEWID" exp=""/>
-        <constraint desc="" field="ID" exp=""/>
-        <constraint desc="" field="IDTo" exp=""/>
-      </constraintExpressions>
-      <expressionfields/>
-      <attributeactions>
-        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="" icon="" capture="0" type="0" name="" shortTitle=""/>
       </attributeactions>
-      <attributetableconfig sortExpression="" sortOrder="0" actionWidgetStyle="dropDown">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
-          <column name="connect" type="field" hidden="0" width="-1"/>
-          <column name="OLDID" type="field" hidden="0" width="-1"/>
-          <column name="area" type="field" hidden="0" width="-1"/>
-          <column name="slope" type="field" hidden="0" width="-1"/>
-          <column name="drainarea" type="field" hidden="0" width="-1"/>
-          <column name="xposition" type="field" hidden="0" width="-1"/>
-          <column name="yposition" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_PSORD" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_ID" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_TO" type="field" hidden="0" width="-1"/>
-          <column name="areamax" type="field" hidden="0" width="-1"/>
-          <column name="inivolume" type="field" hidden="0" width="-1"/>
-          <column name="volumemax" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_CHILD" type="field" hidden="0" width="-1"/>
-          <column name="NEWID" type="field" hidden="0" width="-1"/>
-          <column name="ID" type="field" hidden="0" width="-1"/>
-          <column name="IDTo" type="field" hidden="0" width="-1"/>
-          <column type="actions" hidden="1" width="-1"/>
+          <column width="-1" hidden="0" type="field" name="connect"/>
+          <column width="-1" hidden="0" type="field" name="OLDID"/>
+          <column width="-1" hidden="0" type="field" name="area"/>
+          <column width="-1" hidden="0" type="field" name="slope"/>
+          <column width="-1" hidden="0" type="field" name="drainarea"/>
+          <column width="-1" hidden="0" type="field" name="xposition"/>
+          <column width="-1" hidden="0" type="field" name="yposition"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_PSORD"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_ID"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_TO"/>
+          <column width="-1" hidden="0" type="field" name="areamax"/>
+          <column width="-1" hidden="0" type="field" name="inivolume"/>
+          <column width="-1" hidden="0" type="field" name="volumemax"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_CHILD"/>
+          <column width="-1" hidden="0" type="field" name="NEWID"/>
+          <column width="-1" hidden="0" type="field" name="ID"/>
+          <column width="-1" hidden="0" type="field" name="IDTo"/>
+          <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <editform tolerant="1"></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
@@ -551,49 +313,34 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <editable>
-        <field name="ID" editable="1"/>
-        <field name="IDTo" editable="1"/>
-        <field name="NEWID" editable="1"/>
-        <field name="OFLD_CHILD" editable="1"/>
-        <field name="OFLD_ID" editable="1"/>
-        <field name="OFLD_PSORD" editable="1"/>
-        <field name="OFLD_TO" editable="1"/>
-        <field name="OLDID" editable="1"/>
-        <field name="area" editable="1"/>
-        <field name="areamax" editable="1"/>
-        <field name="connect" editable="1"/>
-        <field name="drainarea" editable="1"/>
-        <field name="inivolume" editable="1"/>
-        <field name="slope" editable="1"/>
-        <field name="volumemax" editable="1"/>
-        <field name="xposition" editable="1"/>
-        <field name="yposition" editable="1"/>
-      </editable>
-      <labelOnTop>
-        <field name="ID" labelOnTop="0"/>
-        <field name="IDTo" labelOnTop="0"/>
-        <field name="NEWID" labelOnTop="0"/>
-        <field name="OFLD_CHILD" labelOnTop="0"/>
-        <field name="OFLD_ID" labelOnTop="0"/>
-        <field name="OFLD_PSORD" labelOnTop="0"/>
-        <field name="OFLD_TO" labelOnTop="0"/>
-        <field name="OLDID" labelOnTop="0"/>
-        <field name="area" labelOnTop="0"/>
-        <field name="areamax" labelOnTop="0"/>
-        <field name="connect" labelOnTop="0"/>
-        <field name="drainarea" labelOnTop="0"/>
-        <field name="inivolume" labelOnTop="0"/>
-        <field name="slope" labelOnTop="0"/>
-        <field name="volumemax" labelOnTop="0"/>
-        <field name="xposition" labelOnTop="0"/>
-        <field name="yposition" labelOnTop="0"/>
-      </labelOnTop>
       <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="connect" expression=""/>
+        <default field="OLDID" expression=""/>
+        <default field="area" expression=""/>
+        <default field="slope" expression=""/>
+        <default field="drainarea" expression=""/>
+        <default field="xposition" expression=""/>
+        <default field="yposition" expression=""/>
+        <default field="OFLD_PSORD" expression=""/>
+        <default field="OFLD_ID" expression=""/>
+        <default field="OFLD_TO" expression=""/>
+        <default field="areamax" expression=""/>
+        <default field="inivolume" expression=""/>
+        <default field="volumemax" expression=""/>
+        <default field="OFLD_CHILD" expression=""/>
+        <default field="NEWID" expression=""/>
+        <default field="ID" expression=""/>
+        <default field="IDTo" expression=""/>
+        <default field="APconnect" expression=""/>
+      </defaults>
       <previewExpression>OLDID</previewExpression>
-      <mapTip></mapTip>
     </maplayer>
-    <maplayer geometry="Line" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" minScale="1e+08" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" type="vector" maxScale="0" simplifyLocal="1" styleCategories="AllStyleCategories" simplifyDrawingTol="1" readOnly="0" simplifyDrawingHints="1" labelsEnabled="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="0" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>519426.34280529787065461</xmin>
         <ymin>6305118.48376321140676737</ymin>
@@ -618,69 +365,88 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <contact>
-          <name></name>
-          <organization></organization>
-          <position></position>
-          <voice></voice>
-          <fax></fax>
-          <email></email>
-          <role></role>
-        </contact>
-        <links/>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial maxy="0" dimensions="2" minz="0" maxz="0" crs="" maxx="0" minx="0" miny="0"/>
-          <temporal>
-            <period>
-              <start></start>
-              <end></end>
-            </period>
-          </temporal>
-        </extent>
-      </resourceMetadata>
       <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
-      <dataDependencies/>
-      <legend type="default-vector"/>
       <expressionfields/>
       <map-layer-style-manager current="défaut">
         <map-layer-style name="défaut"/>
       </map-layer-style-manager>
-      <auxiliaryLayer/>
-      <flags>
-        <Identifiable>1</Identifiable>
-        <Removable>1</Removable>
-        <Searchable>1</Searchable>
-      </flags>
-      <renderer-v2 forceraster="0" enableorderby="0" type="singleSymbol" symbollevels="0">
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="OLDID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="slope">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="width">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="drainarea">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="xposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="yposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_PSORD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_TO">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="height">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="nmanning">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="NEWID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="IDTo">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SNID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ENID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="heigh">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="RS_PSORD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_TORS">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_CHILD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GUconnect">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
-          <symbol name="0" type="line" alpha="1" force_rhr="0" clip_to_extent="1">
-            <layer pass="0" locked="0" enabled="1" class="SimpleLine">
+          <symbol alpha="1" clip_to_extent="1" type="line" name="0">
+            <layer pass="0" class="SimpleLine" locked="0">
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="5;2"/>
-              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
@@ -689,209 +455,78 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
               <prop k="offset" v="0"/>
-              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
-              <prop k="ring_filter" v="0"/>
               <prop k="use_custom_dash" v="0"/>
-              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
-                  <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
-                </Option>
-              </data_defined_properties>
+              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
             </layer>
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale/>
+        <sizescale scalemethod="diameter"/>
       </renderer-v2>
+      <labeling type="simple"/>
       <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>OLDID</value>
-        </property>
-        <property value="0" key="embeddedWidgets/count"/>
+        <property key="dualview/previewExpressions" value="OLDID"/>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory sizeType="MM" lineSizeType="MM" height="15" minScaleDenominator="0" backgroundColor="#ffffff" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" diagramOrientation="Up" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" penColor="#000000" minimumSize="0" maxScaleDenominator="1e+08" barWidth="5" rotationOffset="270" penAlpha="255" backgroundAlpha="255" scaleDependency="Area" width="15" penWidth="0" enabled="0">
-          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>OLDID</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Étiquette"/>
+        <family fieldname="" name="Ubuntu"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="0" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="0">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" placement="2" showAll="1">
-        <properties>
-          <Option type="Map">
-            <Option value="" name="name" type="QString"/>
-            <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
-          </Option>
-        </properties>
-      </DiagramLayerSettings>
-      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
-        <activeChecks/>
-        <checkConfiguration/>
-      </geometryOptions>
-      <fieldConfiguration>
-        <field name="OLDID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="slope">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="length">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="width">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="drainarea">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="xposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="yposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_PSORD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_TO">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="height">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="nmanning">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="GUconnect">
-          <editWidget type="Range">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="NEWID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="IDTo">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="SNID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="ENID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="heigh">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="RS_PSORD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_TORS">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_CHILD">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-      </fieldConfiguration>
+      <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="18" placement="2" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform></annotationform>
       <aliases>
         <alias field="OLDID" index="0" name=""/>
         <alias field="slope" index="1" name=""/>
@@ -905,130 +540,53 @@ def my_form_open(dialog, layer, feature):
         <alias field="OFLD_TO" index="9" name=""/>
         <alias field="height" index="10" name=""/>
         <alias field="nmanning" index="11" name=""/>
-        <alias field="GUconnect" index="12" name=""/>
-        <alias field="NEWID" index="13" name=""/>
-        <alias field="ID" index="14" name=""/>
-        <alias field="IDTo" index="15" name=""/>
-        <alias field="SNID" index="16" name=""/>
-        <alias field="ENID" index="17" name=""/>
-        <alias field="heigh" index="18" name=""/>
-        <alias field="RS_PSORD" index="19" name=""/>
-        <alias field="OFLD_TORS" index="20" name=""/>
-        <alias field="OFLD_CHILD" index="21" name=""/>
+        <alias field="NEWID" index="12" name=""/>
+        <alias field="ID" index="13" name=""/>
+        <alias field="IDTo" index="14" name=""/>
+        <alias field="SNID" index="15" name=""/>
+        <alias field="ENID" index="16" name=""/>
+        <alias field="heigh" index="17" name=""/>
+        <alias field="RS_PSORD" index="18" name=""/>
+        <alias field="OFLD_TORS" index="19" name=""/>
+        <alias field="OFLD_CHILD" index="20" name=""/>
+        <alias field="GUconnect" index="21" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <defaults>
-        <default field="OLDID" applyOnUpdate="0" expression=""/>
-        <default field="slope" applyOnUpdate="0" expression=""/>
-        <default field="length" applyOnUpdate="0" expression=""/>
-        <default field="width" applyOnUpdate="0" expression=""/>
-        <default field="drainarea" applyOnUpdate="0" expression=""/>
-        <default field="xposition" applyOnUpdate="0" expression=""/>
-        <default field="yposition" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_PSORD" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_ID" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_TO" applyOnUpdate="0" expression=""/>
-        <default field="height" applyOnUpdate="0" expression=""/>
-        <default field="nmanning" applyOnUpdate="0" expression=""/>
-        <default field="GUconnect" applyOnUpdate="0" expression=""/>
-        <default field="NEWID" applyOnUpdate="0" expression=""/>
-        <default field="ID" applyOnUpdate="0" expression=""/>
-        <default field="IDTo" applyOnUpdate="0" expression=""/>
-        <default field="SNID" applyOnUpdate="0" expression=""/>
-        <default field="ENID" applyOnUpdate="0" expression=""/>
-        <default field="heigh" applyOnUpdate="0" expression=""/>
-        <default field="RS_PSORD" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_TORS" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_CHILD" applyOnUpdate="0" expression=""/>
-      </defaults>
-      <constraints>
-        <constraint constraints="0" field="OLDID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="slope" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="length" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="width" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="drainarea" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="xposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="yposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_PSORD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_TO" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="height" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="nmanning" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="GUconnect" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="NEWID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="IDTo" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="SNID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="ENID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="heigh" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="RS_PSORD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_TORS" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_CHILD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-      </constraints>
-      <constraintExpressions>
-        <constraint desc="" field="OLDID" exp=""/>
-        <constraint desc="" field="slope" exp=""/>
-        <constraint desc="" field="length" exp=""/>
-        <constraint desc="" field="width" exp=""/>
-        <constraint desc="" field="drainarea" exp=""/>
-        <constraint desc="" field="xposition" exp=""/>
-        <constraint desc="" field="yposition" exp=""/>
-        <constraint desc="" field="OFLD_PSORD" exp=""/>
-        <constraint desc="" field="OFLD_ID" exp=""/>
-        <constraint desc="" field="OFLD_TO" exp=""/>
-        <constraint desc="" field="height" exp=""/>
-        <constraint desc="" field="nmanning" exp=""/>
-        <constraint desc="" field="GUconnect" exp=""/>
-        <constraint desc="" field="NEWID" exp=""/>
-        <constraint desc="" field="ID" exp=""/>
-        <constraint desc="" field="IDTo" exp=""/>
-        <constraint desc="" field="SNID" exp=""/>
-        <constraint desc="" field="ENID" exp=""/>
-        <constraint desc="" field="heigh" exp=""/>
-        <constraint desc="" field="RS_PSORD" exp=""/>
-        <constraint desc="" field="OFLD_TORS" exp=""/>
-        <constraint desc="" field="OFLD_CHILD" exp=""/>
-      </constraintExpressions>
-      <expressionfields/>
-      <attributeactions>
-        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="" icon="" capture="0" type="0" name="" shortTitle=""/>
       </attributeactions>
-      <attributetableconfig sortExpression="&quot;OFLD_CHILD&quot;" sortOrder="1" actionWidgetStyle="dropDown">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;OFLD_CHILD&quot;" sortOrder="1">
         <columns>
-          <column name="OLDID" type="field" hidden="0" width="-1"/>
-          <column name="slope" type="field" hidden="0" width="-1"/>
-          <column name="length" type="field" hidden="0" width="-1"/>
-          <column name="width" type="field" hidden="0" width="-1"/>
-          <column name="drainarea" type="field" hidden="0" width="-1"/>
-          <column name="xposition" type="field" hidden="0" width="-1"/>
-          <column name="yposition" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_PSORD" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_ID" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_TO" type="field" hidden="0" width="-1"/>
-          <column name="height" type="field" hidden="0" width="-1"/>
-          <column name="nmanning" type="field" hidden="0" width="-1"/>
-          <column name="GUconnect" type="field" hidden="0" width="-1"/>
-          <column name="NEWID" type="field" hidden="0" width="-1"/>
-          <column name="ID" type="field" hidden="0" width="-1"/>
-          <column name="IDTo" type="field" hidden="0" width="-1"/>
-          <column name="SNID" type="field" hidden="0" width="-1"/>
-          <column name="ENID" type="field" hidden="0" width="-1"/>
-          <column name="heigh" type="field" hidden="0" width="-1"/>
-          <column name="RS_PSORD" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_TORS" type="field" hidden="0" width="-1"/>
-          <column type="actions" hidden="1" width="-1"/>
-          <column name="OFLD_CHILD" type="field" hidden="0" width="-1"/>
+          <column width="-1" hidden="0" type="field" name="OLDID"/>
+          <column width="-1" hidden="0" type="field" name="slope"/>
+          <column width="-1" hidden="0" type="field" name="length"/>
+          <column width="-1" hidden="0" type="field" name="width"/>
+          <column width="-1" hidden="0" type="field" name="drainarea"/>
+          <column width="-1" hidden="0" type="field" name="xposition"/>
+          <column width="-1" hidden="0" type="field" name="yposition"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_PSORD"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_ID"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_TO"/>
+          <column width="-1" hidden="0" type="field" name="height"/>
+          <column width="-1" hidden="0" type="field" name="nmanning"/>
+          <column width="-1" hidden="0" type="field" name="GUconnect"/>
+          <column width="-1" hidden="0" type="field" name="NEWID"/>
+          <column width="-1" hidden="0" type="field" name="ID"/>
+          <column width="-1" hidden="0" type="field" name="IDTo"/>
+          <column width="-1" hidden="0" type="field" name="SNID"/>
+          <column width="-1" hidden="0" type="field" name="ENID"/>
+          <column width="-1" hidden="0" type="field" name="heigh"/>
+          <column width="-1" hidden="0" type="field" name="RS_PSORD"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_TORS"/>
+          <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_CHILD"/>
         </columns>
       </attributetableconfig>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <editform tolerant="1"></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
@@ -1047,57 +605,38 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <editable>
-        <field name="ENID" editable="1"/>
-        <field name="GUconnect" editable="1"/>
-        <field name="ID" editable="1"/>
-        <field name="IDTo" editable="1"/>
-        <field name="NEWID" editable="1"/>
-        <field name="OFLD_ID" editable="1"/>
-        <field name="OFLD_PSORD" editable="1"/>
-        <field name="OFLD_TO" editable="1"/>
-        <field name="OFLD_TORS" editable="1"/>
-        <field name="OLDID" editable="1"/>
-        <field name="RS_PSORD" editable="1"/>
-        <field name="SNID" editable="1"/>
-        <field name="drainarea" editable="1"/>
-        <field name="heigh" editable="1"/>
-        <field name="height" editable="1"/>
-        <field name="length" editable="1"/>
-        <field name="nmanning" editable="1"/>
-        <field name="slope" editable="1"/>
-        <field name="width" editable="1"/>
-        <field name="xposition" editable="1"/>
-        <field name="yposition" editable="1"/>
-      </editable>
-      <labelOnTop>
-        <field name="ENID" labelOnTop="0"/>
-        <field name="GUconnect" labelOnTop="0"/>
-        <field name="ID" labelOnTop="0"/>
-        <field name="IDTo" labelOnTop="0"/>
-        <field name="NEWID" labelOnTop="0"/>
-        <field name="OFLD_ID" labelOnTop="0"/>
-        <field name="OFLD_PSORD" labelOnTop="0"/>
-        <field name="OFLD_TO" labelOnTop="0"/>
-        <field name="OFLD_TORS" labelOnTop="0"/>
-        <field name="OLDID" labelOnTop="0"/>
-        <field name="RS_PSORD" labelOnTop="0"/>
-        <field name="SNID" labelOnTop="0"/>
-        <field name="drainarea" labelOnTop="0"/>
-        <field name="heigh" labelOnTop="0"/>
-        <field name="height" labelOnTop="0"/>
-        <field name="length" labelOnTop="0"/>
-        <field name="nmanning" labelOnTop="0"/>
-        <field name="slope" labelOnTop="0"/>
-        <field name="width" labelOnTop="0"/>
-        <field name="xposition" labelOnTop="0"/>
-        <field name="yposition" labelOnTop="0"/>
-      </labelOnTop>
       <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="OLDID" expression=""/>
+        <default field="slope" expression=""/>
+        <default field="length" expression=""/>
+        <default field="width" expression=""/>
+        <default field="drainarea" expression=""/>
+        <default field="xposition" expression=""/>
+        <default field="yposition" expression=""/>
+        <default field="OFLD_PSORD" expression=""/>
+        <default field="OFLD_ID" expression=""/>
+        <default field="OFLD_TO" expression=""/>
+        <default field="height" expression=""/>
+        <default field="nmanning" expression=""/>
+        <default field="NEWID" expression=""/>
+        <default field="ID" expression=""/>
+        <default field="IDTo" expression=""/>
+        <default field="SNID" expression=""/>
+        <default field="ENID" expression=""/>
+        <default field="heigh" expression=""/>
+        <default field="RS_PSORD" expression=""/>
+        <default field="OFLD_TORS" expression=""/>
+        <default field="OFLD_CHILD" expression=""/>
+        <default field="GUconnect" expression=""/>
+      </defaults>
       <previewExpression>OLDID</previewExpression>
-      <mapTip></mapTip>
     </maplayer>
-    <maplayer geometry="Polygon" simplifyAlgorithm="0" simplifyMaxScale="1" refreshOnNotifyEnabled="0" minScale="1e+08" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" type="vector" maxScale="0" simplifyLocal="1" styleCategories="AllStyleCategories" simplifyDrawingTol="1" readOnly="0" simplifyDrawingHints="1" labelsEnabled="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="0" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>519162.5</xmin>
         <ymin>6304862.5</ymin>
@@ -1122,317 +661,182 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <contact>
-          <name></name>
-          <organization></organization>
-          <position></position>
-          <voice></voice>
-          <fax></fax>
-          <email></email>
-          <role></role>
-        </contact>
-        <links/>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial maxy="0" dimensions="2" minz="0" maxz="0" crs="" maxx="0" minx="0" miny="0"/>
-          <temporal>
-            <period>
-              <start></start>
-              <end></end>
-            </period>
-          </temporal>
-        </extent>
-      </resourceMetadata>
       <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
-      <dataDependencies/>
-      <legend type="default-vector"/>
       <expressionfields/>
       <map-layer-style-manager current="défaut">
         <map-layer-style name="défaut"/>
       </map-layer-style-manager>
-      <auxiliaryLayer/>
-      <flags>
-        <Identifiable>1</Identifiable>
-        <Removable>1</Removable>
-        <Searchable>1</Searchable>
-      </flags>
-      <renderer-v2 forceraster="0" enableorderby="0" type="singleSymbol" symbollevels="0">
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="OLDID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="slope">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="xposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="yposition">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="flowdist">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SU_PSORD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_PSORD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_TO">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SCSlanduse">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SCSsoil">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AWC">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="clay">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="soilbulkd">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="zsoillayer">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="nmanning">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Ksat">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="zrootmax">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="soilcode">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="equipment">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="pRHt_ini">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="rotation">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="FROM_AP">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="IDTo">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OFLD_TOSU">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="realarea">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
-          <symbol name="0" type="fill" alpha="1" force_rhr="0" clip_to_extent="1">
-            <layer pass="0" locked="0" enabled="1" class="SimpleFill">
-              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="color" v="190,207,80,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="137,149,57,255"/>
               <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0.26"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
-                  <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
-                </Option>
-              </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale/>
+        <sizescale scalemethod="diameter"/>
       </renderer-v2>
+      <labeling type="simple"/>
       <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>OLDID</value>
-        </property>
-        <property value="0" key="embeddedWidgets/count"/>
+        <property key="dualview/previewExpressions" value="OLDID"/>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory sizeType="MM" lineSizeType="MM" height="15" minScaleDenominator="0" backgroundColor="#ffffff" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" diagramOrientation="Up" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" penColor="#000000" minimumSize="0" maxScaleDenominator="1e+08" barWidth="5" rotationOffset="270" penAlpha="255" backgroundAlpha="255" scaleDependency="Area" width="15" penWidth="0" enabled="0">
-          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>OLDID</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Étiquette"/>
+        <family fieldname="" name="Ubuntu"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="0" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="0">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" placement="1" showAll="1">
-        <properties>
-          <Option type="Map">
-            <Option value="" name="name" type="QString"/>
-            <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
-          </Option>
-        </properties>
-      </DiagramLayerSettings>
-      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
-        <activeChecks/>
-        <checkConfiguration/>
-      </geometryOptions>
-      <fieldConfiguration>
-        <field name="OLDID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="slope">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="area">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="xposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="yposition">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="flowdist">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="SU_PSORD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_PSORD">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_TO">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="SCSlanduse">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="SCSsoil">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="AWC">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="clay">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="soilbulkd">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="zsoillayer">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="nmanning">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="Ksat">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="zrootmax">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="soilcode">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="equipment">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="pRHt_ini">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="rotation">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="FROM_AP">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="ID">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="IDTo">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="OFLD_TOSU">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="realarea">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-      </fieldConfiguration>
+      <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="18" placement="1" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform></annotationform>
       <aliases>
         <alias field="OLDID" index="0" name=""/>
         <alias field="slope" index="1" name=""/>
@@ -1465,141 +869,46 @@ def my_form_open(dialog, layer, feature):
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <defaults>
-        <default field="OLDID" applyOnUpdate="0" expression=""/>
-        <default field="slope" applyOnUpdate="0" expression=""/>
-        <default field="area" applyOnUpdate="0" expression=""/>
-        <default field="xposition" applyOnUpdate="0" expression=""/>
-        <default field="yposition" applyOnUpdate="0" expression=""/>
-        <default field="flowdist" applyOnUpdate="0" expression=""/>
-        <default field="SU_PSORD" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_PSORD" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_ID" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_TO" applyOnUpdate="0" expression=""/>
-        <default field="SCSlanduse" applyOnUpdate="0" expression=""/>
-        <default field="SCSsoil" applyOnUpdate="0" expression=""/>
-        <default field="AWC" applyOnUpdate="0" expression=""/>
-        <default field="clay" applyOnUpdate="0" expression=""/>
-        <default field="soilbulkd" applyOnUpdate="0" expression=""/>
-        <default field="zsoillayer" applyOnUpdate="0" expression=""/>
-        <default field="nmanning" applyOnUpdate="0" expression=""/>
-        <default field="Ksat" applyOnUpdate="0" expression=""/>
-        <default field="zrootmax" applyOnUpdate="0" expression=""/>
-        <default field="soilcode" applyOnUpdate="0" expression=""/>
-        <default field="equipment" applyOnUpdate="0" expression=""/>
-        <default field="pRHt_ini" applyOnUpdate="0" expression=""/>
-        <default field="rotation" applyOnUpdate="0" expression=""/>
-        <default field="FROM_AP" applyOnUpdate="0" expression=""/>
-        <default field="ID" applyOnUpdate="0" expression=""/>
-        <default field="IDTo" applyOnUpdate="0" expression=""/>
-        <default field="OFLD_TOSU" applyOnUpdate="0" expression=""/>
-        <default field="realarea" applyOnUpdate="0" expression=""/>
-      </defaults>
-      <constraints>
-        <constraint constraints="0" field="OLDID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="slope" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="area" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="xposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="yposition" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="flowdist" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="SU_PSORD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_PSORD" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_TO" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="SCSlanduse" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="SCSsoil" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="AWC" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="clay" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="soilbulkd" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="zsoillayer" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="nmanning" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="Ksat" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="zrootmax" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="soilcode" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="equipment" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="pRHt_ini" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="rotation" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="FROM_AP" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="ID" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="IDTo" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="OFLD_TOSU" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="realarea" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-      </constraints>
-      <constraintExpressions>
-        <constraint desc="" field="OLDID" exp=""/>
-        <constraint desc="" field="slope" exp=""/>
-        <constraint desc="" field="area" exp=""/>
-        <constraint desc="" field="xposition" exp=""/>
-        <constraint desc="" field="yposition" exp=""/>
-        <constraint desc="" field="flowdist" exp=""/>
-        <constraint desc="" field="SU_PSORD" exp=""/>
-        <constraint desc="" field="OFLD_PSORD" exp=""/>
-        <constraint desc="" field="OFLD_ID" exp=""/>
-        <constraint desc="" field="OFLD_TO" exp=""/>
-        <constraint desc="" field="SCSlanduse" exp=""/>
-        <constraint desc="" field="SCSsoil" exp=""/>
-        <constraint desc="" field="AWC" exp=""/>
-        <constraint desc="" field="clay" exp=""/>
-        <constraint desc="" field="soilbulkd" exp=""/>
-        <constraint desc="" field="zsoillayer" exp=""/>
-        <constraint desc="" field="nmanning" exp=""/>
-        <constraint desc="" field="Ksat" exp=""/>
-        <constraint desc="" field="zrootmax" exp=""/>
-        <constraint desc="" field="soilcode" exp=""/>
-        <constraint desc="" field="equipment" exp=""/>
-        <constraint desc="" field="pRHt_ini" exp=""/>
-        <constraint desc="" field="rotation" exp=""/>
-        <constraint desc="" field="FROM_AP" exp=""/>
-        <constraint desc="" field="ID" exp=""/>
-        <constraint desc="" field="IDTo" exp=""/>
-        <constraint desc="" field="OFLD_TOSU" exp=""/>
-        <constraint desc="" field="realarea" exp=""/>
-      </constraintExpressions>
-      <expressionfields/>
-      <attributeactions>
-        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="" icon="" capture="0" type="0" name="" shortTitle=""/>
       </attributeactions>
-      <attributetableconfig sortExpression="" sortOrder="0" actionWidgetStyle="dropDown">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
-          <column name="OLDID" type="field" hidden="0" width="-1"/>
-          <column name="slope" type="field" hidden="0" width="-1"/>
-          <column name="area" type="field" hidden="0" width="-1"/>
-          <column name="xposition" type="field" hidden="0" width="-1"/>
-          <column name="yposition" type="field" hidden="0" width="-1"/>
-          <column name="flowdist" type="field" hidden="0" width="-1"/>
-          <column name="SU_PSORD" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_PSORD" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_ID" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_TO" type="field" hidden="0" width="-1"/>
-          <column name="SCSlanduse" type="field" hidden="0" width="-1"/>
-          <column name="SCSsoil" type="field" hidden="0" width="-1"/>
-          <column name="AWC" type="field" hidden="0" width="-1"/>
-          <column name="clay" type="field" hidden="0" width="-1"/>
-          <column name="soilbulkd" type="field" hidden="0" width="-1"/>
-          <column name="zsoillayer" type="field" hidden="0" width="-1"/>
-          <column name="nmanning" type="field" hidden="0" width="-1"/>
-          <column name="Ksat" type="field" hidden="0" width="-1"/>
-          <column name="zrootmax" type="field" hidden="0" width="-1"/>
-          <column name="soilcode" type="field" hidden="0" width="-1"/>
-          <column name="equipment" type="field" hidden="0" width="-1"/>
-          <column name="pRHt_ini" type="field" hidden="0" width="-1"/>
-          <column name="rotation" type="field" hidden="0" width="-1"/>
-          <column name="FROM_AP" type="field" hidden="0" width="-1"/>
-          <column name="ID" type="field" hidden="0" width="-1"/>
-          <column name="IDTo" type="field" hidden="0" width="-1"/>
-          <column name="OFLD_TOSU" type="field" hidden="0" width="-1"/>
-          <column name="realarea" type="field" hidden="0" width="-1"/>
-          <column type="actions" hidden="1" width="-1"/>
+          <column width="-1" hidden="0" type="field" name="OLDID"/>
+          <column width="-1" hidden="0" type="field" name="slope"/>
+          <column width="-1" hidden="0" type="field" name="area"/>
+          <column width="-1" hidden="0" type="field" name="xposition"/>
+          <column width="-1" hidden="0" type="field" name="yposition"/>
+          <column width="-1" hidden="0" type="field" name="flowdist"/>
+          <column width="-1" hidden="0" type="field" name="SU_PSORD"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_PSORD"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_ID"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_TO"/>
+          <column width="-1" hidden="0" type="field" name="SCSlanduse"/>
+          <column width="-1" hidden="0" type="field" name="SCSsoil"/>
+          <column width="-1" hidden="0" type="field" name="AWC"/>
+          <column width="-1" hidden="0" type="field" name="clay"/>
+          <column width="-1" hidden="0" type="field" name="soilbulkd"/>
+          <column width="-1" hidden="0" type="field" name="zsoillayer"/>
+          <column width="-1" hidden="0" type="field" name="nmanning"/>
+          <column width="-1" hidden="0" type="field" name="Ksat"/>
+          <column width="-1" hidden="0" type="field" name="zrootmax"/>
+          <column width="-1" hidden="0" type="field" name="soilcode"/>
+          <column width="-1" hidden="0" type="field" name="equipment"/>
+          <column width="-1" hidden="0" type="field" name="pRHt_ini"/>
+          <column width="-1" hidden="0" type="field" name="rotation"/>
+          <column width="-1" hidden="0" type="field" name="FROM_AP"/>
+          <column width="-1" hidden="0" type="field" name="ID"/>
+          <column width="-1" hidden="0" type="field" name="IDTo"/>
+          <column width="-1" hidden="0" type="field" name="OFLD_TOSU"/>
+          <column width="-1" hidden="0" type="field" name="realarea"/>
+          <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <editform tolerant="1"></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
@@ -1618,131 +927,59 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <editable>
-        <field name="AWC" editable="1"/>
-        <field name="FROM_AP" editable="1"/>
-        <field name="ID" editable="1"/>
-        <field name="IDTo" editable="1"/>
-        <field name="Ksat" editable="1"/>
-        <field name="OFLD_ID" editable="1"/>
-        <field name="OFLD_PSORD" editable="1"/>
-        <field name="OFLD_TO" editable="1"/>
-        <field name="OFLD_TOSU" editable="1"/>
-        <field name="OLDID" editable="1"/>
-        <field name="SCSlanduse" editable="1"/>
-        <field name="SCSsoil" editable="1"/>
-        <field name="SU_PSORD" editable="1"/>
-        <field name="area" editable="1"/>
-        <field name="clay" editable="1"/>
-        <field name="equipment" editable="1"/>
-        <field name="flowdist" editable="1"/>
-        <field name="nmanning" editable="1"/>
-        <field name="pRHt_ini" editable="1"/>
-        <field name="realarea" editable="1"/>
-        <field name="rotation" editable="1"/>
-        <field name="slope" editable="1"/>
-        <field name="soilbulkd" editable="1"/>
-        <field name="soilcode" editable="1"/>
-        <field name="xposition" editable="1"/>
-        <field name="yposition" editable="1"/>
-        <field name="zrootmax" editable="1"/>
-        <field name="zsoillayer" editable="1"/>
-      </editable>
-      <labelOnTop>
-        <field name="AWC" labelOnTop="0"/>
-        <field name="FROM_AP" labelOnTop="0"/>
-        <field name="ID" labelOnTop="0"/>
-        <field name="IDTo" labelOnTop="0"/>
-        <field name="Ksat" labelOnTop="0"/>
-        <field name="OFLD_ID" labelOnTop="0"/>
-        <field name="OFLD_PSORD" labelOnTop="0"/>
-        <field name="OFLD_TO" labelOnTop="0"/>
-        <field name="OFLD_TOSU" labelOnTop="0"/>
-        <field name="OLDID" labelOnTop="0"/>
-        <field name="SCSlanduse" labelOnTop="0"/>
-        <field name="SCSsoil" labelOnTop="0"/>
-        <field name="SU_PSORD" labelOnTop="0"/>
-        <field name="area" labelOnTop="0"/>
-        <field name="clay" labelOnTop="0"/>
-        <field name="equipment" labelOnTop="0"/>
-        <field name="flowdist" labelOnTop="0"/>
-        <field name="nmanning" labelOnTop="0"/>
-        <field name="pRHt_ini" labelOnTop="0"/>
-        <field name="realarea" labelOnTop="0"/>
-        <field name="rotation" labelOnTop="0"/>
-        <field name="slope" labelOnTop="0"/>
-        <field name="soilbulkd" labelOnTop="0"/>
-        <field name="soilcode" labelOnTop="0"/>
-        <field name="xposition" labelOnTop="0"/>
-        <field name="yposition" labelOnTop="0"/>
-        <field name="zrootmax" labelOnTop="0"/>
-        <field name="zsoillayer" labelOnTop="0"/>
-      </labelOnTop>
       <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="OLDID" expression=""/>
+        <default field="slope" expression=""/>
+        <default field="area" expression=""/>
+        <default field="xposition" expression=""/>
+        <default field="yposition" expression=""/>
+        <default field="flowdist" expression=""/>
+        <default field="SU_PSORD" expression=""/>
+        <default field="OFLD_PSORD" expression=""/>
+        <default field="OFLD_ID" expression=""/>
+        <default field="OFLD_TO" expression=""/>
+        <default field="SCSlanduse" expression=""/>
+        <default field="SCSsoil" expression=""/>
+        <default field="AWC" expression=""/>
+        <default field="clay" expression=""/>
+        <default field="soilbulkd" expression=""/>
+        <default field="zsoillayer" expression=""/>
+        <default field="nmanning" expression=""/>
+        <default field="Ksat" expression=""/>
+        <default field="zrootmax" expression=""/>
+        <default field="soilcode" expression=""/>
+        <default field="equipment" expression=""/>
+        <default field="pRHt_ini" expression=""/>
+        <default field="rotation" expression=""/>
+        <default field="FROM_AP" expression=""/>
+        <default field="ID" expression=""/>
+        <default field="IDTo" expression=""/>
+        <default field="OFLD_TOSU" expression=""/>
+        <default field="realarea" expression=""/>
+      </defaults>
       <previewExpression>OLDID</previewExpression>
-      <mapTip></mapTip>
     </maplayer>
   </projectlayers>
-  <layerorder>
-    <layer id="RE_61a8a340_6234_47bb_9902_ae3ab8d9744a"/>
-    <layer id="RS_fc4cbca4_4cc3_4087_87b9_2d11038c446c"/>
-    <layer id="SU_ed9dc438_3683_49ca_8df3_a5aa53e5d0e4"/>
-  </layerorder>
   <properties>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-    </Gui>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-    </PositionPrecision>
-    <Measure>
-      <Ellipsoid type="QString">WGS84</Ellipsoid>
-    </Measure>
-    <PAL>
-      <CandidatesPolygon type="int">30</CandidatesPolygon>
-      <SearchMethod type="int">0</SearchMethod>
-      <DrawRectOnly type="bool">false</DrawRectOnly>
-      <ShowingAllLabels type="bool">false</ShowingAllLabels>
-      <CandidatesLine type="int">50</CandidatesLine>
-      <ShowingCandidates type="bool">false</ShowingCandidates>
-      <CandidatesPoint type="int">16</CandidatesPoint>
-      <TextFormat type="int">0</TextFormat>
-      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
-    </PAL>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
     <Measurement>
       <DistanceUnits type="QString"></DistanceUnits>
       <AreaUnits type="QString"></AreaUnits>
     </Measurement>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+    </PositionPrecision>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
-    <SpatialRefSys>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
   </properties>
   <visibility-presets/>
-  <transformContext/>
-  <projectMetadata>
-    <identifier></identifier>
-    <parentidentifier></parentidentifier>
-    <language></language>
-    <type></type>
-    <title></title>
-    <abstract></abstract>
-    <links/>
-    <author>Jean-Christophe Fabre</author>
-    <creation>2019-05-16T09:21:30</creation>
-  </projectMetadata>
-  <Annotations/>
-  <Layouts/>
 </qgis>

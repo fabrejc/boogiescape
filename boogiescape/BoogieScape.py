@@ -80,14 +80,14 @@ class BoogieScape():
     self._DatastoreFluidXFile = "datastore.fluidx"
 
     self._InputREFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
-                           'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
+                           'OFLD_TO': ogr.OFTString,
                            'areamax': ogr.OFTReal, 'inivolume': ogr.OFTReal, 'volumemax': ogr.OFTReal, 
-                           'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal,
+                           'drainarea': ogr.OFTReal, 'slope': ogr.OFTReal, 'AP_ID' : ogr.OFTInteger64,
                            'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal }
     self._InputRSFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
                            'OFLD_TO': ogr.OFTString,
                            'slope': ogr.OFTReal, 'length': ogr.OFTReal, 'width': ogr.OFTReal, 'height': ogr.OFTReal, 
-                           'drainarea': ogr.OFTReal, 'nmanning' : ogr.OFTReal,
+                           'drainarea': ogr.OFTReal, 'nmanning' : ogr.OFTReal, 'AP_ID' : ogr.OFTInteger64,
                            'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 'GUconnect': ogr.OFTInteger64 }
     self._InputSUFields = {'OFLD_ID': ogr.OFTInteger64,'OFLD_TO': ogr.OFTString,'OFLD_PSORD': ogr.OFTInteger64,
                            'slope': ogr.OFTReal, 'area': ogr.OFTReal, 'xposition': ogr.OFTReal, 'yposition': ogr.OFTReal, 
@@ -274,7 +274,6 @@ class BoogieScape():
       if Unit.Id is None:
         BoogieScape._printActionFailed("Failed (empty OFLD_ID field)")
 
-
       UnitsData[Unit.Id] = Unit
 
     BoogieScape._printActionDone()
@@ -338,25 +337,26 @@ class BoogieScape():
   def _appendAPFromSource(self,OtherData,OtherClass,PcsOrd):
 
     for k,OtherUnit in OtherData.items():
-      for Child in OtherUnit.Child:
-        if Child[0] == "AP":
-          BoogieScape._printActionStarted("Creating AP#{} from {}#{}".format(Child[1],OtherClass,OtherUnit.Id))
-          Unit = Data.SpatialUnit()
-          Unit.Geometry = OtherUnit.Geometry.Centroid()
+      if OtherUnit.Attributes["AP_ID"] is not None:
+        APID = OtherUnit.Attributes["AP_ID"]
+        BoogieScape._printActionStarted("Creating AP#{} from {}#{}".format(APID,OtherClass,OtherUnit.Id))
+        Unit = Data.SpatialUnit()
+        Unit.Geometry = OtherUnit.Geometry.Centroid()
 
-          SUList = list()
-          for k,SUUnit in self._SUData.items():
-            FromAP = int(SUUnit.Attributes["FROM_AP"])
-            if FromAP == int(Child[1]):
-              SUList.append(["SU",SUUnit.Id])
+        SUList = list()
+        for k,SUUnit in self._SUData.items():
+          FromAP = int(SUUnit.Attributes["FROM_AP"])
+          if FromAP == APID:
+            SUList.append(["SU",SUUnit.Id])
           
-          Unit.Id = Child[1]
-          Unit.PcsOrd = int(PcsOrd)
-          Unit.To = SUList
-          Unit.Attributes['xposition'] = Unit.Geometry.GetX()
-          Unit.Attributes['yposition'] = Unit.Geometry.GetY()
-          self._APData[Unit.Id] = Unit
-          BoogieScape._printActionDone()
+        Unit.Id = APID
+        Unit.PcsOrd = int(PcsOrd)
+        Unit.To = SUList
+        Unit.Child.append([OtherClass,APID])
+        Unit.Attributes['xposition'] = Unit.Geometry.GetX()
+        Unit.Attributes['yposition'] = Unit.Geometry.GetY()
+        self._APData[Unit.Id] = Unit
+        BoogieScape._printActionDone()
 
 
   ######################################################
