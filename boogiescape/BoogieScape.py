@@ -76,7 +76,8 @@ class BoogieScape():
     self._SUFileShp = 'SU.shp'
     self._SUFileJson = 'SU.geojson'
 
-    self._FluidXFile = "domain.fluidx"
+    self._DomainFluidXFile = "domain.fluidx"
+    self._DatastoreFluidXFile = "datastore.fluidx"
 
     self._InputREFields = {'OFLD_ID': ogr.OFTInteger64, 'OFLD_PSORD': ogr.OFTInteger64,
                            'OFLD_TO': ogr.OFTString, 'OFLD_CHILD': ogr.OFTString,
@@ -547,10 +548,10 @@ class BoogieScape():
   ######################################################
 
 
-  def _writeFluidXfile(self):
+  def _writeFluidXfiles(self):
     BoogieScape._printActionStarted("Creating domain.fluidx file")
    
-    FXFile = open(self.getOutputPath(self._FluidXFile),'w')
+    FXFile = open(self.getOutputPath(self._DomainFluidXFile),'w')
     FXFile.write(indentCRStr(0,'<?xml version="1.0" standalone="yes"?>'))
     FXFile.write(indentCRStr(0,'<openfluid>'))
     FXFile.write(indentCRStr(1,'<domain>'))
@@ -574,10 +575,33 @@ class BoogieScape():
     FXFile.write(indentCRStr(1,'</domain>'))
     FXFile.write(indentCRStr(0,'</openfluid>'))
 
-
     FXFile.close()
 
     BoogieScape._printActionDone()
+
+
+    BoogieScape._printActionStarted("Creating datastore.fluidx file")
+
+    FXFile = open(self.getOutputPath(self._DatastoreFluidXFile),'w')
+ 
+    FXFile.write(indentCRStr(0,'<?xml version="1.0" standalone="yes"?>'))
+    FXFile.write(indentCRStr(0,'<openfluid>'))
+    FXFile.write(indentCRStr(1,'<datastore>'))
+
+    FXFile.write(indentCRStr(2,'<dataitem id="AP" type="geovector" source="AP.shp" unitclass="AP" />'))
+    FXFile.write(indentCRStr(2,'<dataitem id="GU" type="geovector" source="GU.shp" unitclass="GU" />'))
+    FXFile.write(indentCRStr(2,'<dataitem id="RE" type="geovector" source="RE.shp" unitclass="RE" />'))
+    FXFile.write(indentCRStr(2,'<dataitem id="RS" type="geovector" source="RS.shp" unitclass="RS" />'))
+    FXFile.write(indentCRStr(2,'<dataitem id="SU" type="geovector" source="SU.shp" unitclass="SU" />'))
+
+    FXFile.write(indentCRStr(1,'</datastore>'))
+    FXFile.write(indentCRStr(0,'</openfluid>'))
+
+    FXFile.close()
+
+
+    BoogieScape._printActionDone()
+
 
 
   ######################################################
@@ -622,7 +646,7 @@ class BoogieScape():
 
 
     BoogieScape._printStage("Writing output FluidX files")
-    self._writeFluidXfile()
+    self._writeFluidXfiles()
 
 
 ######################################################
